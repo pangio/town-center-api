@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded());
 
 // app.use('/', homeRoute);
 app.use('/api/cines', cinemasRoute);
-app.use('/api/hospitales', hospitalsRoute);
+app.use('/api/hospital', hospitalsRoute);
 app.use('/api/restaurantes', restaurantsRoute);
 app.use('/api/ofertas', salesRoute);
 app.use('/api/servicios', servicesRoute);
