@@ -7,7 +7,6 @@ var port = process.env.PORT || 8000,
  * Routes
  */
 var cinemasRoute = require('./routes/cinemas'),
-    hospitalsRoute = require('./routes/hospitals'),
     restaurantsRoute = require('./routes/restaurants'),
     salesRoute = require('./routes/sales'),
     servicesRoute = require('./routes/services'),
@@ -24,7 +23,6 @@ app.use(bodyParser.urlencoded());
 
 // app.use('/', homeRoute);
 app.use('/api/cines', cinemasRoute);
-app.use('/api/hospital', hospitalsRoute);
 app.use('/api/restaurantes', restaurantsRoute);
 app.use('/api/ofertas', salesRoute);
 app.use('/api/servicios', servicesRoute);

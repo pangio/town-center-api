@@ -1,33 +1,18 @@
 'use strict';
 
-//
-// http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/GettingStarted.NodeJs.04.html#GettingStarted.NodeJs.04.Scan
-//
-// AWS Dynamo SCAN
+'use strict';
 
-var sales = [];
-for (var index = 0; index <= 20; index++) {
-  var saleOffer = {
-    id: index,
-    name: 'Sale Offer ' + index
-  };
-  sales.push(saleOffer)
-}
+var dao = require('../daos/dao');
+var _ = require('underscore');
+
+var storeTable = 'TOWN_Offers';
+var key = 'title';
 
 exports.list = function(callback) {
-  console.log('All Sales found.');
-  callback(null, sales);
+  console.log('All offers found.');
+  return dao.findAll(storeTable, ["title", "creator", "description", "end_date", "publish_date", "subtitle", "image_url", "url" ], callback);
 };
 
-// AWS Dynamo Query (findOne)
-exports.findOne = function(saleOfferId, callback) {
-
-  var saleOffer = sales[saleOfferId];  
-  if (!saleOffer) {
-    console.log('SaleOffer not found.');
-    return callback('SaleOffer not found.', null);
-  }
-  
-  console.log('SaleOffer ' + saleOfferId + ' found.');
-  return callback(null, saleOffer);
+exports.findOne = function(offerId, callback) {
+  return dao.findById(storeTable, key, offerId, callback);
 };

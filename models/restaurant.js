@@ -1,33 +1,16 @@
 'use strict';
 
-//
-// http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/GettingStarted.NodeJs.04.html#GettingStarted.NodeJs.04.Scan
-//
-// AWS Dynamo SCAN
+var dao = require('../daos/dao');
+var _ = require('underscore');
 
-var restaurants = [];
-for (var index = 0; index <= 20; index++) {
-  var restaurant = {
-    id: index,
-    name: 'Restaurant ' + index
-  };
-  restaurants.push(restaurant)
-}
+var storeTable = 'TOWN_Stores';
+var key = 'name';
 
 exports.list = function(callback) {
-  console.log('All Restaurants found.');
-  callback(null, restaurants);
+  console.log('All stores found.');
+  return dao.findAll(storeTable, ["name", "description", "hours", "local", "level", "type", "image_url", "url" ], callback);
 };
 
-// AWS Dynamo Query (findOne)
-exports.findOne = function(restaurantId, callback) {
-
-  var restaurant = restaurants[restaurantId];  
-  if (!restaurant) {
-    console.log('Restaurant not found.');
-    return callback('Restaurant not found.', null);
-  }
-  
-  console.log('Restaurant ' + restaurantId + ' found.');
-  return callback(null, restaurant);
+exports.findOne = function(storeId, callback) {
+  return dao.findById(storeTable, key, storeId, callback);
 };
