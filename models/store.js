@@ -8,7 +8,9 @@ var key = 'name';
 
 exports.list = function(callback) {
   console.log('All stores found.');
-  return dao.findAll(storeTable, ["name", "description", "hours", "local", "level", "type", "image_url", "url" ], callback);
+  return dao.findAll(storeTable, ["name", "description", "hours", "local",
+                                  "level", "type", "image_url", "url", "category",
+                                  "map_image_url", "home_image_url" ], callback);
 };
 
 exports.findOne = function(storeId, callback) {
