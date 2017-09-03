@@ -10,7 +10,9 @@ var key = 'title';
 
 exports.list = function(callback) {
   console.log('All offers found.');
-  return dao.findAll(storeTable, ["title", "creator", "description", "end_date", "publish_date", "subtitle", "image_url", "url" ], callback);
+  return dao.findAll(storeTable, ["title", "creator", "description", "end_date",
+    "publish_date", "subtitle", "image_url", "url", "home_image_url"
+  ], callback);
 };
 
 exports.findOne = function(offerId, callback) {
