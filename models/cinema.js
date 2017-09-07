@@ -2,13 +2,13 @@
 
 var _ = require('underscore');
 var dao = require('../daos/dao');
-var cinema_dao = require('../daos/cinema_dao');
+var cinema_dao = require('../daos/cinemaDao');
 
 var cinemaTable = 'TOWN_Cinema';
 var key = 'movie';
 
 exports.list = function(callback) {
-  return cinema_dao.find_movies_to_show(
+  return cinema_dao.findMoviesToShow(
     cinemaTable,
     [
       "movie", "category", "date", "duration", "hours", "image_url",

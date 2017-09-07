@@ -3,7 +3,7 @@ var dynamoReservedWords = require('../dynamodbReservedWords');
 
 var dao = require('../daos/dao');
 
-exports.find_movies_to_show = function(tableName, attributesToReturn, callback) {
+exports.findMoviesToShow = function(tableName, attributesToReturn, callback) {
 
   expressionAttsNames = {}
   attributesToReturnFiltered = []
