@@ -8,7 +8,7 @@ AWS.config.update({
   endpoint: "dynamodb.us-east-1.amazonaws.com"
 });
 
-exports.docClient = new AWS.DynamoDB.DocumentClient();
+var docClient = new AWS.DynamoDB.DocumentClient();
 
 
 // ---- FIND BY ID -----
@@ -85,3 +85,5 @@ exports.findAll = function(tableName, attributesToReturn, callback) {
   }
 
 };
+
+exports.docClient = docClient;
