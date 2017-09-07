@@ -8,7 +8,8 @@ AWS.config.update({
   endpoint: "dynamodb.us-east-1.amazonaws.com"
 });
 
-var docClient = new AWS.DynamoDB.DocumentClient();
+exports.docClient = new AWS.DynamoDB.DocumentClient();
+
 
 // ---- FIND BY ID -----
 exports.findById = function(tableName, field, id, callback) {
@@ -49,8 +50,8 @@ exports.findAll = function(tableName, attributesToReturn, callback) {
     }
   });
 
-  console.log("attrs to return: " + attributesToReturnFiltered);
-  console.log(":: ExpressionAttributeNames :: " + JSON.stringify(expressionAttsNames));
+  // console.log("attrs to return: " + attributesToReturnFiltered);
+  // console.log(":: ExpressionAttributeNames :: " + JSON.stringify(expressionAttsNames));
 
   var params = {
     TableName: tableName,
@@ -58,7 +59,7 @@ exports.findAll = function(tableName, attributesToReturn, callback) {
     ExpressionAttributeNames: expressionAttsNames
   };
 
-  console.log("Scanning " + tableName + " table.");
+  // console.log("Scanning " + tableName + " table.");
   docClient.scan(params, onScan);
 
   function onScan(err, data) {
@@ -66,71 +67,21 @@ exports.findAll = function(tableName, attributesToReturn, callback) {
       console.error("Unable to scan the table. Error JSON:", JSON.stringify(err, null, 2));
       return callback(err, null)
     } else {
-      // print all the movies
-      console.log("Scan succeeded.");
-      data.Items.forEach(function(movie) {
-        console.log(
-          movie);
-      });
+      // console.log("Scan succeeded.");
+      // data.Items.forEach(function(movie) {
+      //   console.log(
+      //     movie);
+      // });
 
       // continue scanning if we have more items, because
       // scan can retrieve a maximum of 1MB of data
       if (typeof data.LastEvaluatedKey != "undefined") {
-        console.log("Scanning for more...");
+        // console.log("Scanning for more...");
         params.ExclusiveStartKey = data.LastEvaluatedKey;
         docClient.scan(params, onScan);
       }
       return callback(null, JSON.stringify(data.Items))
     }
   }
-
-};
-
-
-exports.find_by = function(tableName, index, field_filter, value, attributesToReturn, callback) {
-
-  console.log();
-
-  expressionAttsNames = {}
-  attributesToReturnFiltered = []
-
-  _.each(attributesToReturn, function(attr) {
-    if (_.contains(dynamoReservedWords.reservedWords, attr.toUpperCase())) {
-      // if attr (example date) in dynamo reserved words --> replace with "#dat": "date",
-      var new_attr = "#" + attr.slice(0, -1);
-      console.log(new_attr);
-      expressionAttsNames[new_attr] = attr;
-      attributesToReturnFiltered.push(new_attr)
-    } else {
-      attributesToReturnFiltered.push(attr)
-    }
-  });
-
-  console.log("attrs to return: " + attributesToReturnFiltered);
-  console.log(":: ExpressionAttributeNames :: " + JSON.stringify(expressionAttsNames));
-
-  var params = {
-    TableName: tableName,
-    IndexName: "show-index",
-    ExpressionAttributeNames: expressionAttsNames,
-    KeyConditionExpression: "#sho = :show_value",
-    ExpressionAttributeValues: {
-      ":show_value": "true"
-    },
-    ProjectionExpression: attributesToReturnFiltered,
-  }
-
-  docClient.query(params, function(err, data) {
-    if (err) {
-      console.log("Unable to query. Error:", JSON.stringify(err, null, 2));
-    } else {
-      console.log("Query succeeded.");
-      return callback(null, JSON.stringify(data))
-      // data.Items.forEach(function(item) {
-      //   console.log(" -", item.movie + ": " + item.duration);
-      // });
-    }
-  });
-
 
 };
