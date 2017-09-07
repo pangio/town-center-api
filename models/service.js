@@ -12,7 +12,6 @@ for (var index = 0; index <= 20; index++) {
 }
 
 exports.list = function(callback) {
-  console.log('All Services found.');
   callback(null, services);
 };
 

@@ -7,9 +7,8 @@ var cinemaTable = 'TOWN_Cinema';
 var key = 'movie';
 
 exports.list = function(callback) {
-  console.log('All Cinemas found.');
   return dao.findAll(
-    cinemaTable, 
+    cinemaTable,
     [
       "movie", "category", "date", "duration", "hours", "image_url",
       "language", "screen", "web_image_url", "classification", "show"

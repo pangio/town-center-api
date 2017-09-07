@@ -7,7 +7,6 @@ var storeTable = 'TOWN_Stores';
 var key = 'name';
 
 exports.list = function(callback) {
-  console.log('All stores found.');
   return dao.findAll(
   	storeTable,
   	[
