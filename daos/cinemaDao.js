@@ -3,6 +3,9 @@ var dynamoReservedWords = require('../dynamodbReservedWords');
 
 var dao = require('../daos/dao');
 
+var moment = require('moment');
+
+
 exports.findMoviesToShow = function(tableName, attributesToReturn, callback) {
 
   expressionAttsNames = {}
@@ -39,7 +42,9 @@ exports.findMoviesToShow = function(tableName, attributesToReturn, callback) {
       console.log("Unable to query. Error:", JSON.stringify(err, null, 2));
       return callback(err, null)
     } else {
-      return callback(null, JSON.stringify(data.Items))
+
+      var moviesOrderedByDate = _.sortBy(data.Items, 'date').reverse();
+      return callback(null, JSON.stringify(moviesOrderedByDate))
     }
   });
 
