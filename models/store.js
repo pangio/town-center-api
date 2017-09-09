@@ -15,6 +15,7 @@ exports.list = function(callback) {
   		'hours',
 		'local',
   		'name',
+		'show_home',
 		'status',
   		'subcategory',
   		'url',

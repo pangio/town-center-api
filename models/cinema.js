@@ -11,8 +11,17 @@ exports.list = function(callback) {
   return cinema_dao.findMoviesToShow(
     cinemaTable,
     [
-      "movie", "category", "date", "duration", "hours", "image_url",
-      "language", "screen", "web_image_url", "classification", "show"
+      'category',
+      'classification',
+      'date',
+      'duration',
+      'image_url',
+      'hours',
+      'language',
+      'movie',
+      'show',
+      'screen',
+      'web_image_url',
     ],
     callback);
 };
