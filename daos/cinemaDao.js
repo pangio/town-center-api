@@ -3,9 +3,6 @@ var dynamoReservedWords = require('../dynamodbReservedWords');
 
 var dao = require('../daos/dao');
 
-var moment = require('moment');
-
-
 exports.findMoviesToShow = function(tableName, attributesToReturn, callback) {
 
   expressionAttsNames = {}
