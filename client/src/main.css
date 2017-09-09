@@ -1,0 +1,256 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* navbar */
+.active {
+    text-decoration: underline !important;
+    text-decoration-color: orange !important;
+}
+.navbar img {
+	width: 100%;
+}
+.navbar-toggle {
+	background-color: white;
+}
+.logo {
+	margin: -10px;
+    padding: 0;
+    width: 120px;
+    height: 40px;
+}
+.page-container {
+	padding-top: 50px;
+}
+/* sliders */
+.slider-store-img {
+	/*margin: 0 auto;*/
+	padding: 0 20px;
+}
+
+/*store badges*/
+.store-sm-img {
+	padding: 1px;
+	margin-left: 11px;
+	max-width: 100px;
+	height: 100px;
+	background-color: transparent;
+	border-radius: 3px;
+}
+.store-sm-txt {
+    margin: 5px;
+    padding: 5px;
+    white-space: pre-wrap; 
+    overflow: hidden;
+    /*text-overflow: ellipsis; */
+}
+
+.slider-offer-img {
+	margin: 0 auto;
+	padding: 0 5px;
+	/*max-width: 380px;*/
+	/*max-height: 280px;*/
+}
+.slick-arrow.slick-prev:before, .slick-arrow.slick-next:before {
+	font-size: 40px
+}
+.slick-arrow.slick-prev {
+    position: absolute;
+    -webkit-text-fill-color: orange;
+    text-decoration: none;
+	margin-left: 2%;
+	z-index: 1000;
+}
+
+.slick-arrow.slick-next {
+    position: absolute;
+    -webkit-text-fill-color: orange;
+    text-decoration: none;
+	margin-right: 5%;
+	z-index: 1000;
+}
+
+@media (max-width: 1024px) {
+	.slick-arrow.slick-prev {
+		margin-left: 5%;
+	}
+	.slick-arrow.slick-next {
+	 	margin-right: 10%;
+	}
+}
+
+
+/* sections */
+.sections-container .sections-heading {
+	font-size: 14px;
+	/*font-family: Roboto;*/	
+}
+.sections-boxes{
+	padding: 20px 150px;
+}
+.sections-boxes-mobile{
+	padding: 20px 100px;
+}
+.sections-img {
+	padding: 0;
+	/*margin: 0 auto;*/
+	/*max-width: 200px;*/
+}
+.sections-img:hover {
+	box-shadow: inset 0 0 0 1px #3db219;
+}
+.donde-img {
+	max-width: 180px;	
+	max-height: 70px;
+	display:block;
+	margin: 20px;
+}
+/* commons */
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+@media (min-width: 1025px) {
+	.navbar {
+	    background-image:
+			url(https://s3.amazonaws.com/towncenterweb/assets/img_navbar01.png),
+			url(https://s3.amazonaws.com/towncenterweb/assets/img_navbar02.png);
+		background-position:
+			left 0px top 0px,
+			right 0px top 0px;
+	    background-repeat: no-repeat;
+	}
+	.footer-left {
+		background-image: url('https://s3.amazonaws.com/towncenterweb/assets/img_footer01.png');
+		background-repeat: no-repeat;
+		background-position: left 0px bottom 0px;
+		height: 187px;
+	}
+	.footer-right {
+		background-image: url('https://s3.amazonaws.com/towncenterweb/assets/img_footer02.png');
+		background-repeat: no-repeat;
+		background-position: right 0px bottom 0px;
+		height: 187px;
+	}
+}
+.footer-url {
+	padding: 5px;
+}
+.footer-icon {
+	padding: 5px;
+    width: 32px;
+}
+.footer-imgs{
+	display: inline-flex;
+}
+.more-info-btn {
+	color: white;
+	background-color: green;
+	font-size: 14px;
+}
+.padding {
+	padding: 20px;
+}
+.badge {
+    color: black;
+ 	font-weight: 500;
+ 	padding: 0px;
+}
+.lightgray {
+	color: lightgray;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+.badge-location {
+    border-top: lightgrey;
+    border-top-style: ridge;
+    border-width: 1px;
+}
+.badge-location-img {
+	padding: 0 10px;
+}
+.padding-v {
+	padding: 10px 0;
+}
+.hospital-section {
+	padding-top: 20px;
+	padding-left: 10%;
+}
+.store-badge {
+    text-align: left;
+	width: 250px;
+	background-color: white;
+    border-radius: 0px;
+    margin: 5px;
+    border-style: double;
+    border-width: 1px;
+    border-color: lightgray;
+}
+.resto-badge {
+    text-align: left;
+	width: 200px;
+    /*min-height: 300px;*/
+	background-color: white;
+    border-radius: 0px;
+    margin: 5px;
+    border-style: double;
+    border-width: 1px;
+    border-color: lightgray;
+}
+.float-none {
+	float: none;
+}
+.resto-map-badge {
+    text-align: left;
+	width: 300px;
+	background-color: white;
+    border-radius: 0px;
+    margin: 5px;
+    border-style: double;
+    border-width: 1px;
+    border-color: lightgray;
+}
+.resto-badge-img {
+    min-height: 192px;
+}
+.store-badge-img {
+    min-height: 90px;
+}
+.search {
+    display: inline-block;
+	margin-top: 20px;
+	border-radius: 3px;
+	padding: 5px;
+	max-width: 100px;
+}
+.Select {
+    display: inline-block;
+}
+.Select-input{
+	width: 200px;
+}
+.pull-left {
+	text-align: left;
+}
+.pull-right {
+	text-align: right;
+}
+/*background line for heading*/
+h2.background {
+    margin: 40px 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+h2.background:before {
+    border-top: 2px solid #dfdfdf;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 15px; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+}
+h2.background span { background: #fff; padding: 0 50px; }

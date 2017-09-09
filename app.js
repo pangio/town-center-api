@@ -3,6 +3,12 @@ var port = process.env.PORT || 8000,
     app = express(),
     bodyParser = require('body-parser');
 
+
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 /**
  * Routes
  */
