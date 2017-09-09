@@ -3,16 +3,21 @@
 var dao = require('../daos/dao');
 var _ = require('underscore');
 
-var storeTable = 'TOWN_Stores';
-var key = 'name';
+var storeTable = 'TOWN_Locations';
+var key = 'local';
 
 exports.list = function(callback) {
   return dao.findAll(
   	storeTable,
   	[
-  		"name", "description", "hours", "local",
-    	"level", "type", "image_url", "url", "category",
-    	"map_image_url", "home_image_url"
+		'local',
+  		'category',
+  		'hours',
+  		'name',
+		'status',
+  		'url',
+  		'description',
+  		// 'web_sm_image_url',
   	],
   	callback);
 };
