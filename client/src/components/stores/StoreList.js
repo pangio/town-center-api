@@ -64,16 +64,15 @@ class StoreList extends React.Component {
 
     return (
       <div className='row center'>
-        <div className='col-xs-2'></div>
         
-        <div className='col-xs-4'>
+        <div className='col-xs-6'>
           <input className='search' placeholder='Buscar...' type='text' 
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
             onClick={this.onClick.bind(this)} />
         </div>
 
-        <div className='col-xs-4'>
+        <div className='col-xs-6'>
         <Select
           placeholder='Filtrar por categoría'
           className='search'
