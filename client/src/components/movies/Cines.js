@@ -1,12 +1,26 @@
 import React, { Component } from 'react'
-import MoviesList from './MoviesList'
-import _ from 'underscore'
+import MovieBadge from './MovieBadge'
+// import _ from 'underscore'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 
 class Cines extends Component {
     constructor(props) {
     super(props)
-      this.state = {
-        movies: [],
+    this.state = {
+        settings: {
+          height: 800,
+          autoplay: false,
+          arrows: true,
+          centerMode: true,
+          dots: false,
+          infinite: true,
+          pauseOnHover: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+        movies: []
     }
     this.fetchAllMovies = this.fetchAllMovies.bind(this)
   }
@@ -35,15 +49,22 @@ class Cines extends Component {
     return (
       <div className='center page-container'>
         <h2 className='background'><span>¿Vamos a cine?</span></h2>
-        <img className="img-responsive" alt=''
+        <img className="img-responsive padding-bottom" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-cine.png' />
 
         { this.props.children }
-        {
+        { 
           this.isLoaded() &&
-          <MoviesList moviesList={_.filter(this.state.movies, function(m) {
-            return m.web_image_url !== undefined
-          })} />
+          <div style={{paddingTop: 50}}>
+            <Slider {...this.state.settings}>
+              { 
+                this.state.movies.map((movie, i) => {
+                  return movie.web_image_url !== undefined ? 
+                    (<div key={i} ><MovieBadge movie={movie} /></div>) : null
+                })
+               }
+            </Slider>
+          </div>
         }
       </div>
     )

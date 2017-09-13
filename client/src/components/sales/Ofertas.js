@@ -41,10 +41,11 @@ class Ofertas extends Component {
         { this.props.children }
         {
           this.isLoaded() &&
-          <SalesList salesList={_.filter(this.state.sales, function(s) {
-            // return s
-            return s.image_url !== undefined
-          })} />
+          <div style={{paddingTop: 50}}>
+            <SalesList salesList={_.filter(this.state.sales, function(s) {
+              return s.image_url !== undefined
+            })} />
+          </div>
         }
       </div>
     )
