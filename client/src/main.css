@@ -44,9 +44,11 @@ body {
     padding: 5px;
     white-space: pre-wrap; 
     overflow: hidden;
-    /*text-overflow: ellipsis; */
 }
-
+.movie-sm-txt {
+    white-space: pre-wrap; 
+    overflow: hidden;
+}
 .slider-offer-img {
 	margin: 0 auto;
 	padding: 0 5px;
@@ -156,6 +158,13 @@ body {
 	padding: 20px;
 }
 .badge {
+    text-align: left;
+    background-color: white;
+    border-radius: 0px;
+    margin: 5px;
+    border-style: double;
+    border-width: 1px;
+    border-color: lightgray;
     color: black;
  	font-weight: 500;
  	padding: 0px;
@@ -191,15 +200,11 @@ body {
     border-color: lightgray;
 }
 .resto-badge {
-    text-align: left;
 	width: 200px;
     /*min-height: 300px;*/
-	background-color: white;
-    border-radius: 0px;
-    margin: 5px;
-    border-style: double;
-    border-width: 1px;
-    border-color: lightgray;
+}
+.movie-badge {
+	max-width: 200px;
 }
 .float-none {
 	float: none;
@@ -215,6 +220,9 @@ body {
     border-color: lightgray;
 }
 .resto-badge-img {
+    min-height: 192px;
+}
+.movie-badge-img {
     min-height: 192px;
 }
 .store-badge-img {
