@@ -25,7 +25,7 @@ class RestoMapBadge extends React.Component {
 				<div className='col-xs-12 padding-v badge-location'>
 					<ImgCache
 						classNames={'badge-location-img'}
-						src={assetsurl + 'ic_geo.png'} />
+						src={assetsurl + 'ic_time.png'} />
 			        <span className='lightgray'>{this.props.resto.status} {this.props.resto.hours}</span>
 		    	</div>
 	    	</div>
@@ -34,7 +34,7 @@ class RestoMapBadge extends React.Component {
 				<div className='col-xs-12 padding-v badge-location'>
 					<ImgCache
 						classNames={'badge-location-img'}
-						src={assetsurl + 'ic_geo.png'} />
+						src={assetsurl + 'ic_info.png'} />
 			        <span className='lightgray'>{this.props.resto.url}</span>
 		    	</div>
 	    	</div>
