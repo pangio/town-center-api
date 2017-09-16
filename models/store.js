@@ -10,16 +10,17 @@ exports.list = function(callback) {
   return dao.findAll(
   	storeTable,
   	[
-  		'category',
-  		'description',
-  		'hours',
-		'local',
-  		'name',
-		'show_home',
-		'status',
-  		'subcategory',
-  		'url',
-  		// 'web_sm_image_url',
+      'category',
+      'description',
+      'hours',
+      'local',
+      'name',
+      'map_url',
+      'show_home',
+      'status',
+      'subcategory',
+      'url',
+      // 'web_sm_image_url',
   	],
   	callback);
 };

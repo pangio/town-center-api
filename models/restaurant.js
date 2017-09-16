@@ -7,17 +7,19 @@ var storeTable = 'TOWN_Locations';
 var key = 'local';
 
 exports.list = function(callback) {
-  return dao.findAll(storeTable,
-	[
-  		'category',
-  		'description',
-  		'hours',
-		'local',
-  		'name',
-		'status',
-  		'subcategory',
-  		'url',
-  		// 'web_sm_image_url',
+  return dao.findAll(
+    storeTable,
+  	[
+      'category',
+      'description',
+      'hours',
+      'local',
+      'map_url',
+      'name',
+      'status',
+      'subcategory',
+      'url',
+      // 'web_sm_image_url',
   	],
   	callback);
 };
