@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import SalesList from './SalesList'
 import _ from 'underscore'
+import moment from 'moment'
 
 class Ofertas extends Component {
     constructor(props) {
     super(props)
       this.state = {
         sales: [],
+        salesToday: [],
+        salesTomorrow: [],
+        salesWeek: [],
+        salesMonth: [],
     }
-    this.fetchAllSales = this.fetchAllSales.bind(this)
+    this.dateFormat = 'YYYY-MM-DD'
+    this.monthFormat = 'YYYY-MM'
   }
 
   componentWillMount() {
@@ -16,19 +22,66 @@ class Ofertas extends Component {
     this.fetchAllSales()
   }
 
-  fetchAllSales() {
+  fetchAllSales = () => {
+    let salesToday = []
+    let salesTomorrow = []
+    let salesWeek = []
+    let salesMonth = []
+
     fetch('/api/ofertas')
       .then(response => response.json())
       .then(response => {
-        this.setState({ sales: JSON.parse(response.data) })
+        let salesAll = JSON.parse(response.data)
+        for (let i in salesAll) {
+          let s = salesAll[i]
+          if (this.isToday(s.end_date)) salesToday.push(s)
+          if (this.isTomorrow(s.end_date)) salesTomorrow.push(s)
+          if (this.isWeek(s.end_date)) salesWeek.push(s)
+          if (this.isMonth(s.end_date)) salesMonth.push(s)
+
+        }
+
+        this.setState({ 
+          salesToday: salesToday,
+          salesTomorrow: salesTomorrow,
+          salesWeek: salesWeek,
+          salesMonth: salesMonth,
+          sales: salesAll, // default all
+         })
       })
       .catch((error) => {
         console.error(error)
       })
   }
 
+  isToday = (endDate) => {
+    const date = moment(endDate).format(this.dateFormat)
+    return date === moment().format(this.dateFormat)
+  }
+
+  isTomorrow = (endDate) => {
+    const date = moment(endDate).format(this.dateFormat)
+    const tomorrow = moment().add(1, 'day').format(this.dateFormat)
+    return date === tomorrow
+  }
+
+  isWeek = (endDate) => {
+    const date = moment(endDate)
+    const oneWeek = moment().add(1, 'week')
+    return oneWeek.isAfter(date)
+  }
+
+  isMonth = (endDate) => {
+    const date = moment(endDate).format(this.monthFormat)
+    return date === moment().format(this.monthFormat)
+  }
+
   isLoaded() {
     return this.state.sales !== []
+  }
+
+  setData = (data) => {
+    this.setState({ sales: data })
   }
 
   render() {
@@ -39,6 +92,13 @@ class Ofertas extends Component {
             src='https://s3.amazonaws.com/towncenterweb/assets/header-ofertas.png' />
 
         { this.props.children }
+        <div className='sales-controls'>
+          <h5>POR FECHA</h5>
+          <p><a href='#' onClick={ () => this.setData(this.state.salesToday)}>HOY</a></p>
+          <p><a href='#' onClick={ () => this.setData(this.state.salesTomorrow)}>Mañana</a></p>
+          <p><a href='#' onClick={ () => this.setData(this.state.salesWeek)}>Esta Semana</a></p>
+          <p><a href='#' onClick={ () => this.setData(this.state.salesMonth)}>Del Mes</a></p>
+        </div>
         {
           this.isLoaded() &&
           <div style={{paddingTop: 50}}>
@@ -52,4 +112,4 @@ class Ofertas extends Component {
   }
 }
 
-export default Ofertas;
+export default Ofertas

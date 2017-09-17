@@ -3,7 +3,6 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-
 /* navbar */
 .active {
     text-decoration: underline !important;
@@ -26,10 +25,8 @@ body {
 }
 /* sliders */
 .slider-store-img {
-	/*margin: 0 auto;*/
 	padding: 0 20px;
 }
-
 /*store badges*/
 .store-sm-img {
 	padding: 1px;
@@ -52,8 +49,21 @@ body {
 .slider-offer-img {
 	margin: 0 auto;
 	padding: 0 5px;
-	/*max-width: 380px;*/
-	/*max-height: 280px;*/
+}
+.sales-controls {
+	margin-top: 50px;
+	color: gray;
+}
+@media (min-width: 1024px) {
+	.sales-controls {
+		color: gray;
+		float: left;
+		margin: 50px;
+		padding: 20px;
+		border-color: lightgray;
+		border-radius: 5px;
+		border-style: double;
+	}
 }
 .slick-arrow.slick-prev:before, .slick-arrow.slick-next:before {
 	font-size: 40px
@@ -65,7 +75,6 @@ body {
 	margin-left: 2%;
 	z-index: 1000;
 }
-
 .slick-arrow.slick-next {
     position: absolute;
     -webkit-text-fill-color: orange;
@@ -73,7 +82,6 @@ body {
 	margin-right: 5%;
 	z-index: 1000;
 }
-
 @media (max-width: 1024px) {
 	.slick-arrow.slick-prev {
 		margin-left: 5%;
@@ -82,8 +90,6 @@ body {
 	 	margin-right: 10%;
 	}
 }
-
-
 /* sections */
 .sections-container .sections-heading {
 	font-size: 14px;
@@ -99,8 +105,6 @@ body {
 }
 .sections-img {
 	padding: 0;
-	/*margin: 0 auto;*/
-	/*max-width: 200px;*/
 }
 .sections-img:hover {
 	box-shadow: inset 0 0 0 1px #3db219;
