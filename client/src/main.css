@@ -136,12 +136,15 @@ body {
 		background-repeat: no-repeat;
 		background-position: left 0px bottom 0px;
 		height: 187px;
+		position: absolute;
+		float: left;
 	}
 	.footer-right {
 		background-image: url('https://s3.amazonaws.com/towncenterweb/assets/img_footer02.png');
 		background-repeat: no-repeat;
 		background-position: right 0px bottom 0px;
 		height: 187px;
+		float: right;
 	}
 }
 .footer-url {
