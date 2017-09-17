@@ -183,6 +183,8 @@ body {
     border-top: lightgrey;
     border-top-style: ridge;
     border-width: 1px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .badge-location-img {
 	padding: 0 10px;
@@ -205,8 +207,7 @@ body {
     border-color: lightgray;
 }
 .resto-badge {
-	width: 200px;
-    /*min-height: 300px;*/
+	width: 290px;
 }
 .movie-badge {
 	max-width: 200px;
@@ -226,6 +227,10 @@ body {
 }
 .resto-badge-img {
     min-height: 192px;
+}
+.resto-map-img {
+	width: 290px;
+	height: 290px;
 }
 .movie-badge-img {
     min-height: 192px;
