@@ -24,8 +24,6 @@ class SliderStores extends React.Component {
     }
   }
 
-  componentWillMount() {
-  }
   render() {
     const s3url = 'https://s3.amazonaws.com/towncenterweb/tiendas/home/'
 
@@ -33,19 +31,19 @@ class SliderStores extends React.Component {
       <div>
         <Slider {...this.state.settings}>
           <div className="center">
-            <NavLink to="/tiendas/Samsung%20Experience%20Store" >
+            <NavLink to="/tiendas" >
               <ImgCache classNames={'img-responsive slider-store-img'}
                         src={s3url + 'ic_samsung.png'} />
             </NavLink>
           </div>
           <div className="center">
-            <NavLink to="/tiendas/Puma" >
+            <NavLink to="/tiendas" >
               <ImgCache classNames={'img-responsive slider-store-img'}
                         src={s3url + 'ic_puma.png'} />
             </NavLink>
           </div>
           <div className="center">
-            <NavLink to="/tiendas/Pandora" >
+            <NavLink to="/tiendas" >
               <ImgCache classNames={'img-responsive slider-store-img'}
                         src={s3url + 'ic_pandora.png'} />
             </NavLink>
