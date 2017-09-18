@@ -1,6 +1,5 @@
 import React from 'react'
 import RestoMapBadge from './RestoMapBadge'
-import NavLink from '../NavLink'
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -11,13 +10,20 @@ class Restaurant extends React.Component {
     this.fetchRestaurant = this.fetchRestaurant.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     console.log('fetching Restaurant...')
     this.fetchRestaurant()
   }
 
-  fetchRestaurant() {
-  	let id = this.props.params.id
+  componentWillUpdate(prevProps, prevState) {
+    if (this.state.restaurant && this.state.restaurant.local !== this.props.params.id) {
+      console.log('fetching Restaurant...')
+      this.fetchRestaurant(this.props.params.id)
+    }
+  }
+
+  fetchRestaurant(restoId) {
+    let id = restoId ? restoId : this.props.params.id
     fetch('/api/restaurantes/'+ id)
       .then(response => response.json())
       .then(response => {
@@ -35,9 +41,7 @@ class Restaurant extends React.Component {
   render() {
     return (
     	this.isLoaded() &&
-          <NavLink to={`/restaurantes/${this.state.restaurant.name}`}>
               <RestoMapBadge resto = {this.state.restaurant} />
-          </NavLink>
     )
   }
 }
