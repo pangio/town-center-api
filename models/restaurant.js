@@ -17,7 +17,7 @@ exports.list = function(callback) {
       'map_url',
       'name',
       'status',
-      'subcategory',
+      'type',
       'url',
       // 'web_sm_image_url',
   	],
