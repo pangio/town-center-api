@@ -16,10 +16,10 @@ class WebFooter extends React.Component {
                         <img className='img-responsive donde-img' alt=''
                             src={s3url + 'img_donde.png'} />
                     </NavLink>
-                    <NavLink to='/' >
+                    <a href='https://play.google.com/store/apps/details?id=pa.com.towncenter.mall' >
                         <img className='img-responsive donde-img' alt=''
                             src={s3url + 'btn_estasconsuerte.png'} />
-                    </NavLink>
+                    </a>
                 </span>
             </div>
             <div className='row center padding-v'>
