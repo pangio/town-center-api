@@ -6,6 +6,10 @@
 .navbar img {
     width: 100%;
 }
+.navbar a {
+    text-transform: uppercase;
+    color: gray;
+}
 .navbar-toggle {
     background-color: white;
 }
