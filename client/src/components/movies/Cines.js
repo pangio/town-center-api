@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import MovieBadge from './MovieBadge'
-// import _ from 'underscore'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
+import SliderArrowPrev from '../layout/SliderArrowPrev'
+import SliderArrowNext from '../layout/SliderArrowNext'
 
 class Cines extends Component {
     constructor(props) {
@@ -19,6 +20,8 @@ class Cines extends Component {
           pauseOnHover: true,
           slidesToShow: 3,
           slidesToScroll: 1,
+          nextArrow: <SliderArrowNext />,
+          prevArrow: <SliderArrowPrev />
         },
         movies: []
     }

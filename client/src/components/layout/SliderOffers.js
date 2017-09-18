@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css'
 import '../../main.css'
 import _ from 'underscore'
 import ImgCache from './ImgCache'
+import SliderArrowPrev from './SliderArrowPrev'
+import SliderArrowNext from './SliderArrowNext'
 
 class SliderOffers extends React.Component {
     constructor(props) {
@@ -21,6 +23,8 @@ class SliderOffers extends React.Component {
           slidesToShow: 3,
           slidesToScroll: 1,
           speed: 500,
+          nextArrow: <SliderArrowNext />,
+          prevArrow: <SliderArrowPrev />
         },
         sales: [],
     }

@@ -68,28 +68,30 @@ body {
 	}
 }
 .slick-arrow.slick-prev:before, .slick-arrow.slick-next:before {
-	font-size: 40px
+	display: none;
+	font-size: 40px;
 }
+
 .slick-arrow.slick-prev {
-    position: absolute;
+/*    position: absolute;
     -webkit-text-fill-color: orange;
     text-decoration: none;
-	margin-left: 2%;
+*/	margin-left: 5%;
 	z-index: 1000;
 }
 .slick-arrow.slick-next {
     position: absolute;
     -webkit-text-fill-color: orange;
     text-decoration: none;
-	margin-right: 5%;
-	z-index: 1000;
+	margin-right: 8%;
 }
+
 @media (max-width: 1024px) {
 	.slick-arrow.slick-prev {
-		margin-left: 5%;
+		margin-left: 8%;
 	}
 	.slick-arrow.slick-next {
-	 	margin-right: 10%;
+	 	margin-right: 18%;
 	}
 }
 /* sections */
