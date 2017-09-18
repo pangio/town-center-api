@@ -91,13 +91,13 @@ body {
 		margin-left: 10%;
 	}
 	.slick-arrow.slick-prev img{
-    	width: 24px;
+    	width: 32px;
 	}
 	.slick-arrow.slick-next {
 	 	margin-right: 18%;
 	}
 	.slick-arrow.slick-next img {
-    	width: 24px;
+    	width: 32px;
 	}
 }
 /* sections */
