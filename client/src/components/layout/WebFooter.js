@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from '../NavLink'
+import { Link } from 'react-router'
 import '../../main.css';
 
 class WebFooter extends React.Component {
@@ -27,10 +28,10 @@ class WebFooter extends React.Component {
                     <img className='footer-icon' alt=''
                         src={s3url + 'ic_instagram.png'} />
                 </NavLink>
-                <NavLink to='/' >
+                <Link to='https://www.facebook.com/TownCenterCDE/' >
                     <img className='footer-icon' alt=''
                         src={s3url + 'ic_facebook.png'} />
-                </NavLink>
+                </Link>
                 <a className='footer-url' href='/'><strong>towncenter.com.pa</strong></a>
             </div>
           </div>

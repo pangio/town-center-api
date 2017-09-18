@@ -58,10 +58,10 @@ body {
 	.sales-controls {
 		color: gray;
 		float: left;
-		margin: 50px;
+		margin: 55px 0px 0px 130px;
 		padding: 50px;
-		width: 200px;
-		height: 280px;
+		width: 288px;
+		height: 288px;
 		border-color: lightgray;
 		border-radius: 5px;
 		border-style: double;
