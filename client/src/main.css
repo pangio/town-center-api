@@ -88,10 +88,16 @@ body {
 
 @media (max-width: 1024px) {
 	.slick-arrow.slick-prev {
-		margin-left: 8%;
+		margin-left: 10%;
+	}
+	.slick-arrow.slick-prev img{
+    	width: 24px;
 	}
 	.slick-arrow.slick-next {
 	 	margin-right: 18%;
+	}
+	.slick-arrow.slick-next img {
+    	width: 24px;
 	}
 }
 /* sections */
