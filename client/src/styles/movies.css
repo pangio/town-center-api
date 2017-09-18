@@ -1,0 +1,11 @@
+/*movies styles*/
+.movie-sm-txt {
+    white-space: pre-wrap; 
+    overflow: hidden;
+}
+.movie-badge {
+  max-width: 200px;
+}
+.movie-badge-img {
+    min-height: 192px;
+}

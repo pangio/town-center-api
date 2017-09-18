@@ -1,0 +1,74 @@
+/*store badges*/
+.store-sm-img {
+  padding: 1px;
+  margin-left: 11px;
+  max-width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+.store-sm-txt {
+  margin: 5px;
+  padding: 5px;
+  white-space: pre-wrap; 
+  overflow: hidden;
+}
+.badge {
+  text-align: left;
+  background-color: white;
+  border-radius: 0px;
+  margin: 5px;
+  border-style: double;
+  border-width: 1px;
+  border-color: lightgray;
+  color: black;
+  font-weight: 500;
+  padding: 0px;
+}
+.badge-location {
+  border-top: lightgrey;
+  border-top-style: ridge;
+  border-width: 1px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.badge-location-img {
+  padding: 0 10px;
+}
+.hospital-section {
+  padding-top: 20px;
+  padding-left: 10%;
+}
+.store-badge {
+  text-align: left;
+  width: 250px;
+  background-color: white;
+  border-radius: 0px;
+  margin: 5px;
+  border-style: double;
+  border-width: 1px;
+  border-color: lightgray;
+}
+.resto-badge {
+  width: 290px;
+}
+.resto-map-badge {
+  text-align: left;
+  width: 300px;
+  background-color: white;
+  border-radius: 0px;
+  margin: 5px;
+  border-style: double;
+  border-width: 1px;
+  border-color: lightgray;
+}
+.resto-badge-img {
+  min-height: 192px;
+}
+.resto-map-img {
+  width: 290px;
+  height: 290px;
+}
+.store-badge-img {
+  min-height: 90px;
+}

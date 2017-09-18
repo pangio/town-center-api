@@ -1,0 +1,64 @@
+/*navbar styles*/
+.active {
+    text-decoration: underline !important;
+    text-decoration-color: orange !important;
+}
+.navbar img {
+    width: 100%;
+}
+.navbar-toggle {
+    background-color: white;
+}
+.logo {
+    margin: -10px;
+    padding: 0;
+    width: 120px;
+    height: 40px;
+}
+@media (min-width: 1025px) {
+    .navbar {
+        background-image:
+            url(https://s3.amazonaws.com/towncenterweb/assets/img_navbar01.png),
+            url(https://s3.amazonaws.com/towncenterweb/assets/img_navbar02.png);
+        background-position:
+            left 0px top 0px,
+            right 0px top 0px;
+        background-repeat: no-repeat;
+    }
+    .footer-left {
+        background-image: url('https://s3.amazonaws.com/towncenterweb/assets/img_footer01.png');
+        background-repeat: no-repeat;
+        background-position: left 0px bottom 0px;
+        height: 187px;
+        float: left;
+    }
+    .footer-right {
+        background-image: url('https://s3.amazonaws.com/towncenterweb/assets/img_footer02.png');
+        background-repeat: no-repeat;
+        background-position: right 0px bottom 0px;
+        height: 187px;
+        float: right;
+    }
+}
+/*footer styles*/
+.footer-url {
+    padding: 5px;
+}
+.footer-icon {
+    padding: 5px;
+    width: 32px;
+}
+.footer-imgs{
+    display: inline-flex;
+}
+/*footer btn img*/
+.more-info-btn {
+    color: white;
+    background-color: green;
+    font-size: 14px;
+}
+.donde-img {
+    max-height: 70px;
+    margin: 20px;
+    padding: 0 5px;
+}

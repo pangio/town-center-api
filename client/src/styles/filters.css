@@ -1,0 +1,38 @@
+/*search bar*/
+.search {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 3px;
+    padding: 5px;
+    min-width: 130px;
+}
+/*category select*/
+.Select {
+    display: inline-block;
+    margin-right: 100%;
+    margin-top: 14px;
+}
+.Select-clear-zone {
+    display: none !important;
+}
+.Select-input{
+    min-width: 130px;
+}
+/*sales offers*/
+.sales-controls {
+    margin-top: 50px;
+    color: gray;
+}
+@media (min-width: 1024px) {
+    .sales-controls {
+        color: gray;
+        float: left;
+        margin: 55px 0px 0px 130px;
+        padding: 50px;
+        width: 288px;
+        height: 288px;
+        border-color: lightgray;
+        border-radius: 5px;
+        border-style: double;
+    }
+}

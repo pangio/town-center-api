@@ -1,0 +1,17 @@
+/*background line for heading*/
+h2.background {
+    margin: 40px 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+h2.background:before {
+    border-top: 2px solid #dfdfdf;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 15px; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+}
+h2.background span { background: #fff; padding: 0 50px; }
