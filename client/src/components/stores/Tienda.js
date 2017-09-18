@@ -11,18 +11,15 @@ class Tienda extends React.Component {
   }
 
   componentDidMount() {
-    console.log('fetching Store...')
     this.fetchStore()
   }
 
-  componentWillUpdate(prevProps, prevState) {
-    if (this.state.store && this.state.store.local !== this.props.params.id) {
-      console.log('fetching Store...')
-      this.fetchStore(this.props.params.id)
-    }
+  componentWillReceiveProps(nextProps) {
+    this.fetchStore(nextProps.params.id)
   }
 
   fetchStore(storeId) {
+    console.log('fetching Store...')
     let id = storeId ? storeId : this.props.params.id
     fetch('/api/tiendas/'+ id)
       .then(response => response.json())

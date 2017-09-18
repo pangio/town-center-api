@@ -11,18 +11,15 @@ class Restaurant extends React.Component {
   }
 
   componentDidMount() {
-    console.log('fetching Restaurant...')
     this.fetchRestaurant()
   }
 
-  componentWillUpdate(prevProps, prevState) {
-    if (this.state.restaurant && this.state.restaurant.local !== this.props.params.id) {
-      console.log('fetching Restaurant...')
-      this.fetchRestaurant(this.props.params.id)
-    }
+  componentWillReceiveProps(nextProps) {
+    this.fetchRestaurant(nextProps.params.id)
   }
 
   fetchRestaurant(restoId) {
+    console.log('fetching Restaurant...')
     let id = restoId ? restoId : this.props.params.id
     fetch('/api/restaurantes/'+ id)
       .then(response => response.json())
