@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+@font-face {
+  font-family: 'Ogonek';
+  src: url('styles/Ogonek.ttf') format('truetype');
+}
 @import url("styles/navbar-footer.css");
 @import url("styles/layout.css");
 @import url("styles/headings.css");

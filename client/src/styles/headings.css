@@ -1,5 +1,6 @@
 /*background line for heading*/
 h2.background {
+    font-family: 'Ogonek';
     margin: 40px 0;
     position: relative;
     text-align: center;
@@ -7,11 +8,26 @@ h2.background {
     z-index: 1;
 }
 h2.background:before {
+    font-family: 'Ogonek';
     border-top: 2px solid #dfdfdf;
     content:"";
     margin: 0 auto;
     position: absolute;
-    top: 15px; left: 0; right: 0; bottom: 0;
+    top: 50%; left: 0; right: 0; bottom: 0;
     z-index: -1;
 }
-h2.background span { background: #fff; padding: 0 50px; }
+h2.background span {
+    font-family: 'Ogonek';
+    background: #fff;
+    padding: 0 80px;
+}
+
+@media (max-width: 1024px) {
+    h2.background { font-size: 10pt;}
+    h2.background:before { font-family: 'Ogonek';}
+    h2.background span { font-family: 'Ogonek';}
+}
+
+@media (max-width: 1024px) {
+    h2.background.hospital:before { display: none;}
+}
