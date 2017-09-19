@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SalesList from './SalesList'
 import _ from 'underscore'
 import moment from 'moment'
+import { Button, Modal } from 'react-bootstrap'
 
 class Ofertas extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Ofertas extends Component {
         salesTomorrow: [],
         salesWeek: [],
         salesMonth: [],
+        isLoading: false,
     }
     this.dateFormat = 'YYYY-MM-DD'
     this.monthFormat = 'YYYY-MM'
@@ -23,6 +25,8 @@ class Ofertas extends Component {
   }
 
   fetchAllSales = () => {
+    this.setState({isLoading: true})
+
     let salesToday = []
     let salesTomorrow = []
     let salesWeek = []
@@ -51,6 +55,9 @@ class Ofertas extends Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -99,6 +106,14 @@ class Ofertas extends Component {
           <p><a href='#' onClick={ () => this.setData(this.state.salesWeek)}>Esta Semana</a></p>
           <p><a href='#' onClick={ () => this.setData(this.state.salesMonth)}>Del Mes</a></p>
         </div>
+        {
+          this.state.isLoading &&
+          <Modal.Dialog>
+            <Modal.Body>
+              <i className='fa fa-refresh fa-spin'></i>
+            </Modal.Body>
+          </Modal.Dialog>
+        }
         {
           this.isLoaded() &&
           <div style={{paddingTop: 50}}>
