@@ -11,32 +11,31 @@ class WebNavBar extends React.Component {
         <Navbar collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <ImageContainer className='logo desktop' path={require('../../assets/ic_logo.png')} />
-              <ImageContainer className='logo mobile' path={require('../../assets/ic_logo_sm.png')} />
+              <NavLink to="/" onlyActiveOnIndex>
+                 <ImageContainer className='logo desktop' path={require('../../assets/ic_logo.png')} />
+                 <ImageContainer className='logo mobile' path={require('../../assets/ic_logo_sm.png')} />
+               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1} href="#">
-                <NavLink to="/" onlyActiveOnIndex>Home</NavLink>
-              </NavItem>
-              <NavItem eventKey={2} href="#">
                 <NavLink to="/tiendas">Tiendas</NavLink>
               </NavItem>
-              <NavItem eventKey={3} href="#">
+              <NavItem eventKey={2} href="#">
                 <NavLink to="/restaurantes">Restaurantes</NavLink>
               </NavItem>
-              <NavItem eventKey={4} href="#">
+              <NavItem eventKey={3} href="#">
                 <NavLink to="/cines">Cine</NavLink>
               </NavItem>
-              <NavItem eventKey={5} href="#">
+              <NavItem eventKey={4} href="#">
                 <NavLink to="/ofertas">Ofertas</NavLink>
               </NavItem>
-              <NavItem eventKey={6} href="#">
+              <NavItem eventKey={5} href="#">
                 <NavLink to="/hospital">Hospital</NavLink>
               </NavItem>
-              <NavItem eventKey={7} href="#">
+              <NavItem eventKey={6} href="#">
                 <NavLink to="/hotel">Hotel</NavLink>
               </NavItem>
             </Nav>
