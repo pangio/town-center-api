@@ -64,14 +64,14 @@
     padding: 5px;
     width: 32px;
 }
-/*
 .footer-icon.facebook:hover {
-    background-color: #4267b2;
+    opacity: 0.6;
+    /*background-color: #4267b2;*/
 }
 .footer-icon.instagram:hover{
-    background-color: #d10869;
+    opacity: 0.6;
+    /*background-color: #d10869;*/
 }
-*/
 .footer-imgs{
     display: inline-flex;
 }
