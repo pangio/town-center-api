@@ -21,7 +21,13 @@ class Cines extends Component {
           slidesToShow: 3,
           slidesToScroll: 1,
           nextArrow: <SliderArrowNext />,
-          prevArrow: <SliderArrowPrev />
+          prevArrow: <SliderArrowPrev />,
+          responsive: [{
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+            }
+          }]
         },
         movies: []
     }
