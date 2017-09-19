@@ -39,3 +39,17 @@ body {
 .sections-img:hover {
     box-shadow: inset 0 0 0 1px #3db219;
 }
+
+/*loading spinner*/
+.modal {
+  top: 100px;
+}
+.fa.fa-refresh.fa-spin {
+  font-size: 20px;
+  padding: 20px !important;
+}
+.modal-dialog {
+  width: 200px;
+  margin: 30px auto;
+  height: 200px;
+}

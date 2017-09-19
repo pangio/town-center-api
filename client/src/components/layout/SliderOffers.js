@@ -8,6 +8,7 @@ import _ from 'underscore'
 import ImgCache from './ImgCache'
 import SliderArrowPrev from './SliderArrowPrev'
 import SliderArrowNext from './SliderArrowNext'
+import { Button, Modal } from 'react-bootstrap'
 
 class SliderOffers extends React.Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class SliderOffers extends React.Component {
           }]
         },
         sales: [],
+        isLoading: false
     }
     this.fetchAllSalesForHomeSlider = this.fetchAllSalesForHomeSlider.bind(this)
   }
@@ -49,6 +51,7 @@ class SliderOffers extends React.Component {
 
   fetchAllSalesForHomeSlider() {
     // fetch('/ofertas/semana')
+    this.setState({isLoading: true})
     fetch('/api/ofertas')
       .then(response => response.json())
       .then(response => {
@@ -61,6 +64,12 @@ class SliderOffers extends React.Component {
       .catch((error) => {
         console.error(error)
       })
+      .then(() => {
+        setTimeout(() => {
+          this.setState({isLoading: false});
+        }, 3000);
+          this.setState({isLoading: false})
+      })
   }
 
   isLoaded() {
@@ -72,6 +81,16 @@ class SliderOffers extends React.Component {
 
     return (
       <div>
+        {
+          this.state.isLoading &&
+          <Modal.Dialog>
+            <Modal.Body>
+              <i className='fa fa-refresh fa-spin'></i>
+            </Modal.Body>
+          </Modal.Dialog>
+
+        }
+
         <Slider {...this.state.settings}>
           <div className="center">
             <NavLink to="/ofertas" >
