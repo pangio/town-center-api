@@ -65,10 +65,7 @@ class SliderOffers extends React.Component {
         console.error(error)
       })
       .then(() => {
-        setTimeout(() => {
-          this.setState({isLoading: false});
-        }, 3000);
-          this.setState({isLoading: false})
+        this.setState({isLoading: false});
       })
   }
 
@@ -88,7 +85,6 @@ class SliderOffers extends React.Component {
               <i className='fa fa-refresh fa-spin'></i>
             </Modal.Body>
           </Modal.Dialog>
-
         }
 
         <Slider {...this.state.settings}>

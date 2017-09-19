@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import SliderArrowPrev from '../layout/SliderArrowPrev'
 import SliderArrowNext from '../layout/SliderArrowNext'
+import { Button, Modal } from 'react-bootstrap'
 
 class Cines extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class Cines extends Component {
             }
           }]
         },
+        isLoading: false,
         movies: []
     }
     this.fetchAllMovies = this.fetchAllMovies.bind(this)
@@ -40,6 +42,7 @@ class Cines extends Component {
   }
 
   fetchAllMovies() {
+    this.setState({isLoading: true})
     fetch('/api/cines')
       .then(response => response.json())
       .then(response => {
@@ -47,6 +50,9 @@ class Cines extends Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -62,6 +68,14 @@ class Cines extends Component {
             src='https://s3.amazonaws.com/towncenterweb/assets/header-cine.png' />
 
         { this.props.children }
+        {
+          this.state.isLoading &&
+          <Modal.Dialog>
+            <Modal.Body>
+              <i className='fa fa-refresh fa-spin'></i>
+            </Modal.Body>
+          </Modal.Dialog>
+        }
         { 
           this.isLoaded() &&
           <div style={{paddingTop: 50}}>
