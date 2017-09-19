@@ -12,7 +12,8 @@ class WebNavBar extends React.Component {
           <Navbar.Header>
             <Navbar.Brand>
               <NavLink to="/" onlyActiveOnIndex>
-                <ImageContainer className='logo' path={require('../../assets/logo.png')} />
+                <ImageContainer className='logo desktop' path={require('../../assets/ic_logo.png')} />
+                <ImageContainer className='logo mobile' path={require('../../assets/ic_logo_sm.png')} />
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle />

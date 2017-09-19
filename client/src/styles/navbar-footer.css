@@ -13,12 +13,24 @@
 .navbar-toggle {
     background-color: white;
 }
+/*custom logo resolution based*/
 .logo {
     margin: -10px;
     padding: 0;
     width: 120px;
     height: 40px;
 }
+@media (max-width: 1024px) {
+    .logo.desktop {
+        display: none !important;
+    }
+}
+@media (min-width: 1025px) {
+    .logo.mobile {
+        display: none !important;
+    }
+}
+/*corner imgs*/
 @media (min-width: 1025px) {
     .navbar {
         background-image:
@@ -52,6 +64,14 @@
     padding: 5px;
     width: 32px;
 }
+/*
+.footer-icon.facebook:hover {
+    background-color: #4267b2;
+}
+.footer-icon.instagram:hover{
+    background-color: #d10869;
+}
+*/
 .footer-imgs{
     display: inline-flex;
 }

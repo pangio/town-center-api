@@ -15,13 +15,13 @@
 }
 @media (max-width: 1024px) {
     .slick-arrow.slick-prev {
-        margin-left: 10%;
+        margin-left: 6%;
     }
     .slick-arrow.slick-prev img{
         width: 32px;
     }
     .slick-arrow.slick-next {
-        margin-right: 18%;
+        margin-right: 10%;
     }
     .slick-arrow.slick-next img {
         width: 32px;
@@ -31,6 +31,49 @@
 .slider-offer-img {
     padding: 5px;
 }
-.slider-store-img {
-    padding: 5px;
+
+/*stores slider*/
+/*hide default arrow*/
+.glyphicon.glyphicon-chevron-left, .glyphicon.glyphicon-chevron-right {
+    display: none;
+}
+/*store slider arrows*/
+.carousel-control {
+    display: block;
+    width: 64px;
+    height: 64px;
+    opacity: 1;
+    top: 40%;
+}
+@media (min-width: 1024px) {
+    .carousel-control.left {
+        background-image: url(https://s3.amazonaws.com/towncenterweb/assets/ic_back.png);
+        left: 20px;
+    }
+    .carousel-control.right {
+        background-image: url(https://s3.amazonaws.com/towncenterweb/assets/ic_next.png);
+        right: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .carousel-control.left {
+        background-image: url(https://s3.amazonaws.com/towncenterweb/assets/ic_back_sm.png) !important;
+        background-repeat: no-repeat;
+        margin-left: 20px;
+    }
+    .carousel-control.right {
+        background-image: url(https://s3.amazonaws.com/towncenterweb/assets/ic_next_sm.png) !important;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 900px) {
+    .carousel-control.right {
+        margin-right: 0px;
+    }
+}
+@media (max-width: 600px) {
+    .carousel-control.right {
+        margin-right: 0px;
+    }
 }
