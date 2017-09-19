@@ -78,16 +78,23 @@
     padding: 5px;
 }
 .footer-icon {
-    padding: 5px;
-    width: 32px;
+    padding: 10px 20px;
+}
+.footer-icon.facebook {
+    background-image: url('https://s3.amazonaws.com/towncenterweb/assets/ic_facebook32.png');
+    background-repeat: no-repeat;
+}
+.footer-icon.instagram {
+    background-image: url('https://s3.amazonaws.com/towncenterweb/assets/ic_instagram32.png');
+    background-repeat: no-repeat;
 }
 .footer-icon.facebook:hover {
-    opacity: 0.6;
-    /*background-color: #4267b2;*/
+    background-image: url('https://s3.amazonaws.com/towncenterweb/assets/ic_facebook_color32.png');
+    background-repeat: no-repeat;
 }
 .footer-icon.instagram:hover{
-    opacity: 0.6;
-    /*background-color: #d10869;*/
+    background-image: url('https://s3.amazonaws.com/towncenterweb/assets/ic_instagram_color32.png');
+    background-repeat: no-repeat;
 }
 .footer-imgs{
     display: inline-flex;

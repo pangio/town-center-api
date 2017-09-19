@@ -24,12 +24,10 @@ class WebFooter extends React.Component {
             </div>
             <div className='row center padding-v'>
                 <a href='https://www.instagram.com/towncenter_cde/' >
-                    <img className='footer-icon instagram' alt=''
-                        src={s3url + 'ic_instagram.png'} />
+                    <span className='footer-icon instagram' />
                 </a>
                 <a href='https://www.facebook.com/TownCenterCDE/' >
-                    <img className='footer-icon facebook' alt=''
-                        src={s3url + 'ic_facebook.png'} />
+                    <span className='footer-icon facebook' />
                 </a>
                 <a className='footer-url' href='/'><strong>towncenter.com.pa</strong></a>
             </div>
