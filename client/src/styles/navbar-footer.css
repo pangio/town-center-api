@@ -1,7 +1,10 @@
 /*navbar styles*/
-.active {
-    text-decoration: underline !important;
-    text-decoration-color: orange !important;
+.navbar a.active {
+    text-decoration: none !important;
+    text-decoration-color: none !important;
+    color: orange !important;
+    padding-bottom: 3px;
+    border-bottom: orange 3px solid;
 }
 .navbar img {
     width: 100%;
@@ -10,6 +13,17 @@
     text-transform: uppercase;
     color: gray;
 }
+.navbar a:hover {
+    text-decoration: none !important;
+    text-decoration-color: orange !important;
+}
+/*.navbar-brand a.active {
+    text-decoration: none !important;
+    text-decoration-color: none !important;
+    padding-bottom: 3px;
+    border-bottom: none !important;
+}
+*/
 .navbar-toggle {
     background-color: white;
 }
