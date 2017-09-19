@@ -1,11 +1,13 @@
 import React from 'react'
 import RestoMapBadge from './RestoMapBadge'
+import { Button, Modal } from 'react-bootstrap'
 
 class Restaurant extends React.Component {
     constructor(props) {
     super(props)
       this.state = {
-        restaurant: undefined
+        restaurant: undefined,
+        isLoading: false
     }
     this.fetchRestaurant = this.fetchRestaurant.bind(this)
   }
@@ -18,9 +20,9 @@ class Restaurant extends React.Component {
     this.fetchRestaurant(nextProps.params.id)
   }
 
-  fetchRestaurant(restoId) {
+  fetchRestaurant(id = this.props.params.id) {
     console.log('fetching Restaurant...')
-    let id = restoId ? restoId : this.props.params.id
+    this.setState({isLoading: true})
     fetch('/api/restaurantes/'+ id)
       .then(response => response.json())
       .then(response => {
@@ -28,6 +30,9 @@ class Restaurant extends React.Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -37,8 +42,20 @@ class Restaurant extends React.Component {
 
   render() {
     return (
-    	this.isLoaded() &&
-              <RestoMapBadge resto = {this.state.restaurant} />
+      <div>
+      {
+        this.state.isLoading &&
+        <Modal.Dialog>
+          <Modal.Body>
+            <i className='fa fa-refresh fa-spin'></i>
+          </Modal.Body>
+        </Modal.Dialog>
+      }
+      {
+        this.isLoaded() &&
+        <RestoMapBadge resto = {this.state.restaurant} />
+      }
+    </div>
     )
   }
 }

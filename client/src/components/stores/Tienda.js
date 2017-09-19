@@ -1,11 +1,13 @@
 import React from 'react'
 import StoreMapBadge from './StoreMapBadge'
+import { Button, Modal } from 'react-bootstrap'
 
 class Tienda extends React.Component {
     constructor(props) {
     super(props)
       this.state = {
-        store: undefined
+        store: undefined,
+        isLoading: false
     }
     this.fetchStore = this.fetchStore.bind(this)
   }
@@ -18,9 +20,9 @@ class Tienda extends React.Component {
     this.fetchStore(nextProps.params.id)
   }
 
-  fetchStore(storeId) {
+  fetchStore(id = this.props.params.id) {
     console.log('fetching Store...')
-    let id = storeId ? storeId : this.props.params.id
+    this.setState({isLoading: true})
     fetch('/api/tiendas/'+ id)
       .then(response => response.json())
       .then(response => {
@@ -28,6 +30,9 @@ class Tienda extends React.Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -37,8 +42,20 @@ class Tienda extends React.Component {
 
   render() {
     return (
-      this.isLoaded() &&
-      <StoreMapBadge store = {this.state.store} />
+    <div>
+     {
+        this.state.isLoading &&
+        <Modal.Dialog>
+          <Modal.Body>
+            <i className='fa fa-refresh fa-spin'></i>
+          </Modal.Body>
+        </Modal.Dialog>
+      }
+      {
+        this.isLoaded() &&
+        <StoreMapBadge store = {this.state.store} />
+      }
+    </div>
     )
   }
 }
