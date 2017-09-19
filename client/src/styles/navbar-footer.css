@@ -43,6 +43,9 @@
     .logo.mobile {
         display: none !important;
     }
+    .navbar-brand img {
+        width: 80%;
+    }
 }
 /*corner imgs*/
 @media (min-width: 1025px) {
