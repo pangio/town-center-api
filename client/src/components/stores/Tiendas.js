@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import StoreList from './StoreList'
 import _ from 'underscore'
+import { Button, Modal } from 'react-bootstrap'
 
 class Tiendas extends Component {
     constructor(props) {
     super(props)
       this.state = {
         stores: [],
+        isLoading: false
     }
     this.fetchAllStores = this.fetchAllStores.bind(this)
   }
@@ -17,6 +19,7 @@ class Tiendas extends Component {
   }
 
   fetchAllStores() {
+    this.setState({isLoading: true})
     fetch('/api/tiendas')
       .then(response => response.json())
       .then(response => {
@@ -24,6 +27,9 @@ class Tiendas extends Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -40,6 +46,14 @@ class Tiendas extends Component {
             src='https://s3.amazonaws.com/towncenterweb/assets/header-tiendas.png' />
 
         { this.props.children }
+        {
+          this.state.isLoading &&
+          <Modal.Dialog>
+            <Modal.Body>
+              <i className='fa fa-refresh fa-spin'></i>
+            </Modal.Body>
+          </Modal.Dialog>
+        }
     		{
           this.isLoaded() &&
           <StoreList storeList={_.filter(this.state.stores, function(s) {

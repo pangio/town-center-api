@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import RestoList from './RestoList'
 import _ from 'underscore'
+import { Button, Modal } from 'react-bootstrap'
 
 class Restaurantes extends Component {
     constructor(props) {
     super(props)
       this.state = {
         restaurants: [],
+        isLoading: false
     }
     this.fetchAllRestaurants = this.fetchAllRestaurants.bind(this)
   }
@@ -17,6 +19,7 @@ class Restaurantes extends Component {
   }
 
   fetchAllRestaurants() {
+    this.setState({isLoading: true})
     fetch('/api/restaurantes')
       .then(response => response.json())
       .then(response => {
@@ -24,6 +27,9 @@ class Restaurantes extends Component {
       })
       .catch((error) => {
         console.error(error)
+      })
+      .then(() => {
+        this.setState({isLoading: false});
       })
   }
 
@@ -39,6 +45,14 @@ class Restaurantes extends Component {
         <img className="img-responsive" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-resto.png' />
 
+        {
+          this.state.isLoading &&
+          <Modal.Dialog>
+            <Modal.Body>
+              <i className='fa fa-refresh fa-spin'></i>
+            </Modal.Body>
+          </Modal.Dialog>
+        }
         { this.props.children }
         {
           this.isLoaded() &&
