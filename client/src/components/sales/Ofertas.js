@@ -109,7 +109,7 @@ class Ofertas extends Component {
         </div>
         {
           this.state.isLoading &&
-          <Modal.Dialog>
+          <Modal.Dialog className='center'>
             <Modal.Body>
               <i className='fa fa-refresh fa-spin'></i>
             </Modal.Body>
