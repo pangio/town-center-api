@@ -64,7 +64,7 @@ class RestoList extends React.Component {
     return (
       <div className='row center'>
         
-        <div className='col-xs-6'>
+        <div className='col-xs-6 align-right'>
         <input className='search' placeholder='Buscar...' type='text' value={this.state.search} 
           onChange={this.updateSearch.bind(this)}
           onClick={this.onClick.bind(this)} />

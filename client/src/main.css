@@ -28,10 +28,10 @@
 .padding-v {
     padding: 10px 0;
 }
-.pull-left {
+.align-left {
     text-align: left;
 }
-.pull-right {
+.align-right {
     text-align: right;
 }
 .lightgray {
