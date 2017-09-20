@@ -41,7 +41,6 @@ class SliderOffers extends React.Component {
         sales: [],
         isLoading: false
     }
-    this.fetchAllSalesForHomeSlider = this.fetchAllSalesForHomeSlider.bind(this)
   }
 
   componentWillMount() {
@@ -49,7 +48,7 @@ class SliderOffers extends React.Component {
     this.fetchAllSalesForHomeSlider()
   }
 
-  fetchAllSalesForHomeSlider() {
+  fetchAllSalesForHomeSlider = () => {
     // fetch('/ofertas/semana')
     this.setState({isLoading: true})
     fetch('/api/ofertas')
