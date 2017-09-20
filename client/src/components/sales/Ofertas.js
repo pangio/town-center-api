@@ -93,12 +93,13 @@ class Ofertas extends Component {
 
   render() {
     return (
-      <div className='ofertas page-container'>
-        <h2 className='background'><span>¡Las Mejores Ofertas!</span></h2>
+      <div className='page-container'>
+        <h2 className='ofertas background'><span>¡Las Mejores Ofertas!</span></h2>
         <img className="img-responsive" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-ofertas.png' />
 
         { this.props.children }
+        <div className='ofertas-container'>
         <div className='sales-controls'>
           <h5>POR FECHA</h5>
           <p><a href='#' onClick={ () => this.setData(this.state.salesToday)}>HOY</a></p>
@@ -122,6 +123,7 @@ class Ofertas extends Component {
             })} />
           </div>
         }
+      </div>
       </div>
     )
   }
