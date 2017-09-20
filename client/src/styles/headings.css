@@ -28,4 +28,6 @@ h2.background span {
 @media (max-width: 768px) {
     h2.background { font-size: 9pt;}
     h2.background:before { display: none;}
+
+    h2.background.hospital span { padding: 0 20px;}
 }
