@@ -6,6 +6,7 @@ h2.background {
     text-align: center;
     text-transform: uppercase;
     z-index: 1;
+    font-size: 12pt;
 }
 h2.background:before {
     font-family: 'Ogonek';
@@ -21,18 +22,10 @@ h2.background span {
     background: #fff;
     padding: 0 80px;
 }
-/*hospital heading*/
-@media (max-width: 700px) {
-    h2.background.hospital { font-size: 9pt;}
-    h2.background.hospital:before { display: none;}
-    h2.background.hospital span { padding: 0 20px;}
-}
-@media (min-width: 700px, max-width: 1024px) {
-    h2.background.hospital span { padding: 0 20px;}
-}
-/*all headings desktop*/
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     h2.background { font-size: 10pt;}
-    h2.background:before { font-family: 'Ogonek';}
-    h2.background span { font-family: 'Ogonek';}
+}
+@media (max-width: 768px) {
+    h2.background { font-size: 9pt;}
+    h2.background:before { display: none;}
 }

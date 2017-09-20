@@ -40,7 +40,7 @@ class Restaurantes extends Component {
   render() {
     return (
       <div className='center page-container'>
-        <h2 className='background'><span>¡Quiero ir a comer!</span></h2>
+        <h2 className='background restaurantes'><span>¡Quiero ir a comer!</span></h2>
 
         <img className="img-responsive" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-resto.png' />
