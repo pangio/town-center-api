@@ -93,7 +93,7 @@ class Ofertas extends Component {
 
   render() {
     return (
-      <div className='center page-container'>
+      <div className='ofertas page-container'>
         <h2 className='background'><span>¡Las Mejores Ofertas!</span></h2>
         <img className="img-responsive" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-ofertas.png' />

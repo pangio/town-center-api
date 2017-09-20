@@ -22,17 +22,31 @@
 .sales-controls {
     margin-top: 50px;
     color: gray;
-}
+    margin: 55px 0px 0px 0px;
+    padding: 50px;
+    width: 288px;
+    height: 288px;
+    border-color: lightgray;
+    border-radius: 5px;
+    border-style: double;
+} 
+/*desktop*/
 @media (min-width: 1024px) {
     .sales-controls {
-        color: gray;
         float: left;
-        margin: 55px 0px 0px 130px;
-        padding: 50px;
-        width: 288px;
-        height: 288px;
-        border-color: lightgray;
-        border-radius: 5px;
-        border-style: double;
+        width: 300px;
+        height: 292px;
+    }
+}
+/*mobile*/
+@media (max-width: 1024px) {
+    .sales-controls {
+        border-style: none;
+        width: unset;
+        height: unset;
+        padding: unset;
+    }
+    .ofertas {
+        text-align: center;
     }
 }

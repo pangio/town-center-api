@@ -40,6 +40,11 @@ body {
     box-shadow: inset 0 0 0 1px #3db219;
 }
 
+.ofertas {
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
 /*loading spinner*/
 .modal {
   top: 100px;
