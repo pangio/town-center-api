@@ -13,4 +13,8 @@ router.route('/:id')
   .get(storeCtrl.get, function(req, res){
 })
 
+router.route('/home')
+  .get(storeCtrl.slider, function(req, res){
+});
+
 module.exports = router;

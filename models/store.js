@@ -12,6 +12,7 @@ exports.list = function(callback) {
   	[
       'category',
       'description',
+      'home_image_url',
       'hours',
       'local',
       'name',
@@ -23,6 +24,16 @@ exports.list = function(callback) {
       // 'web_sm_image_url',
   	],
   	callback);
+};
+
+exports.slider = function(callback) {
+  return dao.findAll(
+    storeTable,
+    [
+      'home_image_url',
+      'show_home',
+    ],
+    callback);
 };
 
 exports.findOne = function(storeId, callback) {

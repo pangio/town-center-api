@@ -33,6 +33,7 @@ app.use('/api/restaurantes', restaurantsRoute);
 app.use('/api/ofertas', salesRoute);
 app.use('/api/servicios', servicesRoute);
 app.use('/api/tiendas', storesRoute);
+app.use('/api/tiendas/home', storesRoute);
 
 app.listen(port,  function(){
     console.log("Server running in port %d ", port);

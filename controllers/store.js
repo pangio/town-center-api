@@ -13,6 +13,16 @@ exports.list = function(req, res, next) {
 	});
 };
 
+exports.slider = function(req, res, next) {
+	model.slider(function(err, data){
+		res.status(err ? 503 : 200).json({
+			error: err ? true : null,
+			errorMessage: err ? err : null,
+			data: data
+		});
+	});
+};
+
 exports.get = function(req, res, next) {
 	var storeId = req.params.id;
 	model.findOne(storeId,function(err, data) {
