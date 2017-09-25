@@ -63,25 +63,26 @@ class StoreList extends React.Component {
     return (
       <div className='row center'>
         
-        <div className='col-xs-6 align-right'>
-          <input className='search' placeholder='Buscar...' type='text' 
-            value={this.state.search}
-            onChange={this.updateSearch}
-            onClick={this.onClick} />
+        <div className='search-container'>
+          <div className='col-xs-6 align-right'>
+            <input className='search' placeholder='Buscar...' type='text' 
+              value={this.state.search}
+              onChange={this.updateSearch}
+              onClick={this.onClick} />
+          </div>
+
+          <div className='col-xs-6'>
+          <Select
+            placeholder='Filtrar por categoría'
+            className='search'
+            name='form-field-name'
+            value={this.state.selectedCategory}
+            options={options}
+            onChange={this.handleOnChangeCategory}
+          />
+          </div>
         </div>
 
-        <div className='col-xs-6'>
-        <Select
-          placeholder='Filtrar por categoría'
-          className='search'
-          name='form-field-name'
-          value={this.state.selectedCategory}
-          options={options}
-          onChange={this.handleOnChangeCategory}
-        />
-        </div>
-
-        <hr />
           <div className='store-list-container center'>
             {
               filteredStores.map((store, i) => {

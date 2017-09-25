@@ -44,7 +44,7 @@ class RestoMapBadge extends React.Component {
 					<ImgCache
 						classNames={'badge-location-img'}
 						src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.resto.local}</span>
+			        <span className='lightgray bold'>{this.props.resto.local}</span>
 		    	</div>
 	    	</div>
     	</div>

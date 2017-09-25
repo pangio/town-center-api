@@ -34,7 +34,18 @@
 }
 .badge-location-img {
   padding: 0 10px;
+  height: 16px;
 }
+/*badge icons*/
+.resto-list-container .resto-badge .badge-location img {
+  width: 16px;
+  margin-right: 20px;
+}
+.store-list-container .store-badge .badge-location img {
+  width: 16px;
+  margin-right: 20px;
+}
+
 .hospital-section {
   padding-top: 20px;
   padding-left: 10%;
@@ -66,8 +77,8 @@
   min-height: 192px;
 }
 .resto-map-img {
-  width: 290px;
-  height: 290px;
+  /*width: 290px;*/
+  height: 260px;
 }
 .store-badge-img {
   min-height: 90px;

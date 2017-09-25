@@ -35,9 +35,12 @@
     text-align: right;
 }
 .lightgray {
-	color: lightgray;
-    white-space: pre-wrap;
-    overflow: hidden;
+  color: lightgray;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+.bold {
+  font-weight: bold;
 }
 .float-none {
   float: none;

@@ -26,7 +26,7 @@ class RestoBadge extends React.Component {
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 center padding-v badge-location'>
 					<ImgCache src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.resto.local}</span>
+			        <span className='lightgray bold'>{this.props.resto.local}</span>
 		    	</div>
 	    	</div>
     	</div>

@@ -44,7 +44,7 @@ class StoreMapBadge extends React.Component {
 			        <ImgCache
 			        	classNames={'badge-location-img'}
 			        	src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.store.local}</span>
+			        <span className='lightgray bold'>{this.props.store.local}</span>
 		    	</div>
 	    	</div>
     	</div>
