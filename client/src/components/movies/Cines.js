@@ -61,7 +61,7 @@ class Cines extends Component {
 
   render() {
     return (
-      <div className='center page-container'>
+      <div className='center page-container cines'>
         <h2 className='background cines'><span>¿Vamos a cine?</span></h2>
         <img className="img-responsive padding-bottom" alt=''
             src='https://s3.amazonaws.com/towncenterweb/assets/header-cine.png' />

@@ -3,6 +3,22 @@
     display: none;
     font-size: 40px;
 }
+.cines .slick-arrow.slick-prev, .cines .slick-arrow.slick-next {
+    top: 45% !important;
+}
+@media (max-width: 1024px) {
+    .cines .slick-arrow.slick-prev, .cines .slick-arrow.slick-next {
+        top: 50% !important;
+    }
+}
+.ofertas .slick-arrow.slick-prev, .ofertas .slick-arrow.slick-next {
+    top: 40% !important;
+}
+@media (max-width: 1024px) {
+    .ofertas .slick-arrow.slick-prev, .ofertas .slick-arrow.slick-next {
+        top: 50% !important;
+    }
+}
 .slick-arrow.slick-prev:hover, .slick-arrow.slick-next:hover {
     opacity: 0.9;
 }

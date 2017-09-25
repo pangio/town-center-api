@@ -76,7 +76,7 @@ class SliderOffers extends React.Component {
     const s3url = 'https://s3.amazonaws.com/towncenterweb/ofertas/'
 
     return (
-      <div>
+      <div className='ofertas'>
         {
           this.state.isLoading &&
           <Modal.Dialog>
