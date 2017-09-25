@@ -3,7 +3,15 @@
     padding-top: 60px;
     padding-bottom: 130px;
 }
+input.search {
+    border-style: solid;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 9px;
+}
 .search {
+    font-size: smaller;
     display: inline-block;
     margin-top: 20px;
     border-radius: 3px;

@@ -25,7 +25,7 @@ class RestoList extends React.Component {
       let obj = { value: label, label: label }
       options.push(obj)
     })
-    options.push({ value: 'Todas', label: 'Todas' })
+    options.push({ value: 'Todas', label: 'Ordenar por categoría' })
     return options
   }
 
