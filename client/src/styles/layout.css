@@ -63,10 +63,10 @@ body {
 }
 
 .store-list-container {
-  width: 80%;
+  max-width: 780px;
   padding-top: 150px;
 }
 .resto-list-container {
-  width: 80%;
+  max-width: 900px;
   padding-top: 150px;
 }
