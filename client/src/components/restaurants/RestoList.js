@@ -79,7 +79,7 @@ class RestoList extends React.Component {
           />
         </div>
 
-          <div>
+          <div className='resto-list-container center'>
             {
               filteredRestoList.map((resto, i) => {
                 return (

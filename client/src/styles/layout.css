@@ -61,3 +61,12 @@ body {
   margin: 30px auto;
   height: 200px;
 }
+
+.store-list-container {
+  width: 80%;
+  padding-top: 150px;
+}
+.resto-list-container {
+  width: 80%;
+  padding-top: 150px;
+}

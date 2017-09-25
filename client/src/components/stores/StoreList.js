@@ -82,7 +82,7 @@ class StoreList extends React.Component {
         </div>
 
         <hr />
-          <div>
+          <div className='store-list-container center'>
             {
               filteredStores.map((store, i) => {
                 return (
