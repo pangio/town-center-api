@@ -44,6 +44,10 @@ body {
     padding: 0 40px;
 }
 
+.footer-container {
+  padding-top: 150px;
+}
+
 /*loading spinner*/
 .modal {
   top: 100px;

@@ -7,7 +7,7 @@ class WebFooter extends React.Component {
     const s3url = 'https://s3.amazonaws.com/towncenterweb/assets/'
 
     return (
-      <div className='row'>
+      <div className='row footer-container'>
         <div className='col-xs-3 footer-left'/>
           <div className='center col-xs-6'>
             <div className='row center padding-v'>
