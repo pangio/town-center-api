@@ -13,8 +13,6 @@ class StoreList extends React.Component {
       search: '',
       selectedCategory: 'Todas'
     }
-    this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
-    this.getCategories = this.getCategories.bind(this)
   }
 
   getCategories() {
@@ -30,19 +28,19 @@ class StoreList extends React.Component {
     return options
   }
 
-  updateSearch(event) {
+  updateSearch = (event) => {
     this.setState({
       search: event.target.value.substr(0, 10)
     })
   }
 
-  onClick(event) {
+  onClick = (event) => {
     this.setState({
       search: ''
     })
   }
   
-  handleOnChangeCategory(event) {
+  handleOnChangeCategory = (event) => {
     if (event) {      
       this.setState({selectedCategory: event.value})
     }
@@ -68,8 +66,8 @@ class StoreList extends React.Component {
         <div className='col-xs-6 align-right'>
           <input className='search' placeholder='Buscar...' type='text' 
             value={this.state.search}
-            onChange={this.updateSearch.bind(this)}
-            onClick={this.onClick.bind(this)} />
+            onChange={this.updateSearch}
+            onClick={this.onClick} />
         </div>
 
         <div className='col-xs-6'>
