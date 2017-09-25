@@ -33,7 +33,6 @@ class Cines extends Component {
         isLoading: false,
         movies: []
     }
-    this.fetchAllMovies = this.fetchAllMovies.bind(this)
   }
 
   componentWillMount() {
@@ -41,7 +40,7 @@ class Cines extends Component {
     this.fetchAllMovies()
   }
 
-  fetchAllMovies() {
+  fetchAllMovies = () => {
     this.setState({isLoading: true})
     fetch('/api/cines')
       .then(response => response.json())
