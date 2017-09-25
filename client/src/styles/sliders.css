@@ -109,11 +109,11 @@
 }
 /*slider offers*/
 .ofertas .slick-slide.slick-active.slick-center {
-  border-color: #3db219;
+  border-color: #718f40;
   border-style: solid;
   border-width: 2px;
 }
 /*slider movies*/
 .slick-slide.slick-active.slick-center .badge.movie-badge {
-  border-color: #3db219;
+  border-color: #718f40;
 }
