@@ -9,7 +9,6 @@ class Restaurant extends React.Component {
         restaurant: undefined,
         isLoading: false
     }
-    this.fetchRestaurant = this.fetchRestaurant.bind(this)
   }
 
   componentDidMount() {
@@ -20,7 +19,7 @@ class Restaurant extends React.Component {
     this.fetchRestaurant(nextProps.params.id)
   }
 
-  fetchRestaurant(id = this.props.params.id) {
+  fetchRestaurant = (id = this.props.params.id) => {
     console.log('fetching Restaurant...')
     this.setState({isLoading: true})
     fetch('/api/restaurantes/'+ id)

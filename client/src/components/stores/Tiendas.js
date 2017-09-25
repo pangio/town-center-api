@@ -10,7 +10,6 @@ class Tiendas extends Component {
         stores: [],
         isLoading: false
     }
-    this.fetchAllStores = this.fetchAllStores.bind(this)
   }
 
   componentWillMount() {
@@ -18,7 +17,7 @@ class Tiendas extends Component {
     this.fetchAllStores()
   }
 
-  fetchAllStores() {
+  fetchAllStores = () => {
     this.setState({isLoading: true})
     fetch('/api/tiendas')
       .then(response => response.json())

@@ -10,7 +10,6 @@ class Restaurantes extends Component {
         restaurants: [],
         isLoading: false
     }
-    this.fetchAllRestaurants = this.fetchAllRestaurants.bind(this)
   }
 
   componentWillMount() {
@@ -18,7 +17,7 @@ class Restaurantes extends Component {
     this.fetchAllRestaurants()
   }
 
-  fetchAllRestaurants() {
+  fetchAllRestaurants = () => {
     this.setState({isLoading: true})
     fetch('/api/restaurantes')
       .then(response => response.json())

@@ -9,7 +9,6 @@ class Tienda extends React.Component {
         store: undefined,
         isLoading: false
     }
-    this.fetchStore = this.fetchStore.bind(this)
   }
 
   componentDidMount() {
@@ -20,7 +19,7 @@ class Tienda extends React.Component {
     this.fetchStore(nextProps.params.id)
   }
 
-  fetchStore(id = this.props.params.id) {
+  fetchStore = (id = this.props.params.id) => {
     console.log('fetching Store...')
     this.setState({isLoading: true})
     fetch('/api/tiendas/'+ id)
