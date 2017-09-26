@@ -12,6 +12,10 @@
   padding: 5px;
   white-space: pre-wrap; 
   overflow: hidden;
+  max-height: 80px;
+}
+.card-name {
+  white-space: pre-wrap; overflow: hidden;
 }
 .badge {
   text-align: left;

@@ -6,6 +6,7 @@ class StoreMapBadge extends React.Component {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const padding1 = { padding: 1 }
+    const marginTop = { marginTop: '20%' }
     const margin0 = { margin:0 }
     return (
 	<div className='row'>
@@ -16,8 +17,8 @@ class StoreMapBadge extends React.Component {
 					src='https://s3.amazonaws.com/towncenterweb/tiendas/ic_adidas.png' />
 	    	</div>
 			<div>
-				<div className='col-xs-5 store-sm-txt padding'>
-					<strong>{this.props.store.name}</strong>
+				<div className='col-xs-5' style={marginTop}>
+					<span className='card-name'><strong>{this.props.store.name}</strong></span>
 		    	</div>
 	    	</div>
 
