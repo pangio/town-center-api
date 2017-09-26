@@ -24,7 +24,7 @@ class MovieBadge extends React.Component {
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 center padding-v badge-location'>
-			        <span className='lightgray' style={verticalAlign}>{this.props.movie.screen} - {this.props.movie.language}</span>
+			        <span className='lightgray bold' style={verticalAlign}>{this.props.movie.screen} - {this.props.movie.language}</span>
 		    	</div>
 	    	</div>
     	</div>
