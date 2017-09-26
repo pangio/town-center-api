@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-// import NavLink from '../NavLink'
+import React, { Component } from 'react'
 
 class Hospital extends Component {
   render() {
     return (
 			<div className='page-container'>
-				<h2 className='background hospital'>
-					<span>Hospital & Consultorios en Costa del Este</span>
-				</h2>
+				<h2 className='background hospital'><span>Hospital & Consultorios en Costa del Este</span></h2>
+
 				<div className='row page-container header-container'>
 					<div className='col-md-6'>
 						<div className='row'>
@@ -15,9 +13,7 @@ class Hospital extends Component {
 								src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
 						</div>
 						<div className='row'>
-							<h2 className='hospital green-header'>
-								<span>Hospital y Consultorios</span>
-							</h2>
+							<h2 className='hospital green-header'><span>Hospital y Consultorios</span></h2>
 						</div>
 					</div>
 					<div className='col-md-6 header-main-img'>
