@@ -47,6 +47,11 @@ body {
 .footer-container {
   padding-top: 150px;
 }
+@media (max-width: 768px) {
+  .footer-container {
+    padding-top: 100px;
+  }
+}
 
 /*loading spinner*/
 .modal {

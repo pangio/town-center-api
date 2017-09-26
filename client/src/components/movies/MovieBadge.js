@@ -5,6 +5,7 @@ class MovieBadge extends React.Component {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/peliculas/'
     const padding1 = { padding: 1 }
     const margin0 = { margin:0 }
+    const verticalAlign = { verticalAlign:'middle' }
     const minHeight = { minHeight:40 }
     return (
 		<div className='badge movie-badge'>
@@ -15,15 +16,15 @@ class MovieBadge extends React.Component {
 	    	</div>
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 movie-sm-txt'>
-					<p className='center padding-v' style={minHeight}><strong>{this.props.movie.movie}</strong></p>
-					<p className='center' style={minHeight}>{this.props.movie.hours}</p>
+					<p className='center padding-v' style={minHeight, verticalAlign}><strong>{this.props.movie.movie}</strong></p>
+					<p className='center' style={minHeight, verticalAlign}>{this.props.movie.hours}</p>
 					<br />
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 center padding-v badge-location'>
-			        <span className='lightgray'>{this.props.movie.screen} - {this.props.movie.language}</span>
+			        <span className='lightgray' style={verticalAlign}>{this.props.movie.screen} - {this.props.movie.language}</span>
 		    	</div>
 	    	</div>
     	</div>
