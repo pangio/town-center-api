@@ -95,8 +95,23 @@ class Ofertas extends Component {
     return (
       <div className='page-container'>
         <h2 className='background ofertas'><span>¡Las Mejores Ofertas!</span></h2>
-        <img className="img-responsive" alt=''
-            src='https://s3.amazonaws.com/towncenterweb/assets/header-ofertas.png' />
+
+        <div className='row page-container header-container'>
+          <div className='col-md-6'>
+            <div className='row'>
+              <img className='img-responsive header-donde-img' alt=''
+                src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
+            </div>
+            <div className='row'>
+              <h2 className='ofertas green-header'><span>¡Ofertas!</span></h2>
+            </div>
+          </div>
+
+          <div className='col-md-6 header-main-img'>
+            <img className='img-responsive' alt=''
+                src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-ofertas.png' />
+          </div>
+        </div>
 
         { this.props.children }
         <div className='ofertas-container'>
