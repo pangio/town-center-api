@@ -71,7 +71,7 @@ class Cines extends Component {
                 src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
             </div>
             <div className='row'>
-              <h2 className='cines green-header'><span>Alojamiento</span></h2>
+              <h2 className='cines green-header'><span>¿Vamos a cine?</span></h2>
             </div>
           </div>
 
