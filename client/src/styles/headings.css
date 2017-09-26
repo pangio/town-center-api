@@ -72,9 +72,13 @@ h2.background span {
   /*padding-right: 0;*/
   /*padding-left: 0;*/
 }
+.header-main-img img {
+  width: 600px;
+}
 .header-donde-img {
-  height: 180px;
+  height: 200px;
   padding: 50px 0;
+  margin: 30px 0;
 }
 @media (max-width: 1000px) {
     .header-donde-img {
