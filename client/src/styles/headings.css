@@ -6,7 +6,7 @@ h2.background {
     text-align: center;
     text-transform: uppercase;
     z-index: 1;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 h2.background:before {
     font-family: 'Ogonek';
@@ -22,11 +22,72 @@ h2.background span {
     background: #fff;
     padding: 0 80px;
 }
+/*
 @media (min-width: 768px) and (max-width: 1024px) {
     h2.background { font-size: 10pt;}
 }
+*/
 @media (max-width: 768px) {
-    h2.background { font-size: 9pt;}
+    h2.background { font-size: 10pt;}
     h2.background:before { display: none;}
     h2.background span { padding: 0 20px; margin: 0 }
+}
+
+/*header sections*/
+.header-container {
+  text-align: center;
+  margin: 0 !important;
+  width: 100%;
+  padding-top: 0;
+  border-color: #718f40;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  vertical-align: middle;
+}
+/*green text*/
+.header-container span {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Ogonek';
+  font-size: 14pt;
+  width: 100%;
+  padding: 20px;
+  border-color: #718f40;
+  color: #718f40;
+  border-style: solid;
+  border-width: 1px;
+}
+@media (max-width: 768px) {
+    .header-container span { font-size: 10pt;}
+}
+/*header imgs*/
+.header-container img {
+  display: unset;
+}
+.header-main-img {
+  text-align: right;
+  float: right;
+  padding: 0;
+  /*padding-right: 0;*/
+  /*padding-left: 0;*/
+}
+.header-donde-img {
+  height: 180px;
+  padding: 50px 0;
+}
+@media (max-width: 1000px) {
+    .header-donde-img {
+      display: none !important;
+      padding: 0 !important;
+    }
+    .page-container .green-header {
+      margin: 0;
+      display: none;
+      padding: 0 !important;
+    }
+    .header-main-img {
+      text-align: center;
+      float: unset;
+    }
 }
