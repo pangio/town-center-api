@@ -92,7 +92,7 @@ class Cines extends Component {
         }
         { 
           this.isLoaded() &&
-          <div style={{paddingTop: 50}}>
+          <div className='movies-container center' style={{paddingTop: 50}}>
             <Slider {...this.state.settings}>
               { 
                 this.state.movies.map((movie, i) => {

@@ -1,4 +1,22 @@
 /*movies styles*/
+.cines .slick-arrow.slick-prev {
+    margin-left: 0;
+    z-index: 1000;
+}
+@media (min-width: 600px) {
+	.movies-container { width: 600px; }
+	.cines .movie-badge { margin: 0px 20px; }
+	.cines .slick-arrow.slick-prev { z-index: 1000; }
+	/*hide/show movies cards*/
+	.slick-slide .movie-badge { display: none; }
+	.slick-slide.slick-active .movie-badge { display: block; }
+}
+@media (max-width: 1024px) {
+    .cines .slick-arrow.slick-prev { margin-left: 6%; }
+}
+@media (max-width: 600px) {
+	.cines .slick-arrow.slick-prev { margin-left: 10%; }
+}
 .movie-sm-txt {
     white-space: pre-wrap; 
     overflow: hidden;
