@@ -6,7 +6,7 @@
 input.search {
     border-style: solid;
     background: white;
-    border: 1px solid lightgray;
+    border: 1px solid #BDBDBD;
     border-radius: 3px;
     padding: 9px;
 }
@@ -38,7 +38,7 @@ input.search {
     padding: 50px;
     width: 288px;
     height: 288px;
-    border-color: lightgray;
+    border-color: #BDBDBD;
     border-radius: 5px;
     border-style: double;
 } 

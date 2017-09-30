@@ -12,7 +12,7 @@
   padding: 5px;
   white-space: pre-wrap; 
   overflow: hidden;
-  max-height: 80px;
+  /*max-height: 80px;*/
 }
 .card-name {
   white-space: pre-wrap; overflow: hidden;
@@ -24,13 +24,13 @@
   margin: 5px;
   border-style: double;
   border-width: 1px;
-  border-color: lightgray;
+  border-color: #BDBDBD;
   color: black;
   font-weight: 500;
   padding: 0px;
 }
 .badge-location {
-  border-top: lightgrey;
+  border-top: #BDBDBD;
   border-top-style: ridge;
   border-width: 1px;
   text-overflow: ellipsis;
@@ -42,12 +42,15 @@
 }
 /*badge icons*/
 .resto-list-container .resto-badge .badge-location img {
-  width: 16px;
+  width: 30px;
   margin-right: 20px;
+  padding-bottom: 20px;
 }
 .store-list-container .store-badge .badge-location img {
-  width: 16px;
-  margin-right: 20px;
+  width: 30px;
+  margin-right: 30px;
+  margin-left: 175px;
+  padding-bottom: 20px;
 }
 
 .hospital-section {
@@ -56,13 +59,14 @@
 }
 .store-badge {
   text-align: left;
-  width: 250px;
+  width: 552px;
+  height: 218px;
   background-color: white;
   border-radius: 0px;
-  margin: 5px;
+  margin-bottom: 53px;
   border-style: double;
   border-width: 1px;
-  border-color: lightgray;
+  border-color: #BDBDBD;
 }
 .resto-badge {
   width: 290px;
@@ -75,7 +79,7 @@
   margin: 5px;
   border-style: double;
   border-width: 1px;
-  border-color: lightgray;
+  border-color: #BDBDBD;
 }
 .resto-badge-img {
   min-height: 192px;
@@ -85,5 +89,12 @@
   height: 260px;
 }
 .store-badge-img {
-  min-height: 90px;
+  height: 145px;
+  width: 145px;
+}
+.roboto20 { font-size: 20pt; padding: 0; margin: 0;}
+.roboto22 { font-size: 22pt; padding: 0; margin: 0;}
+.roboto27 { font-size: 27pt; padding: 0; margin: 0;}
+.lightgray-store {
+  color: #BDBDBD;
 }

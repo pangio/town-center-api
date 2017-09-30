@@ -28,6 +28,9 @@
 .padding-v {
     padding: 10px 0;
 }
+.padding-v-20 {
+    padding: 20px 0;
+}
 .align-left {
     text-align: left;
 }
@@ -35,7 +38,12 @@
     text-align: right;
 }
 .lightgray {
-  color: lightgray;
+  color: #BDBDBD;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+.darkgray {
+  color: #212121;
   white-space: pre-wrap;
   overflow: hidden;
 }
