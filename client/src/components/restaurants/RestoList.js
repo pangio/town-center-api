@@ -84,9 +84,10 @@ class RestoList extends React.Component {
           <div className='resto-list-container center'>
             {
               filteredRestoList.map((resto, i) => {
+                let align = i % 2 === 0
                 return (
                   <NavLink to={`/restaurantes/${resto.local}`} key={i} >
-                      <RestoBadge resto={resto} key={i} />
+                      <RestoBadge resto={resto} key={i} alignLeft = {align} />
                   </NavLink>
                 )
               })

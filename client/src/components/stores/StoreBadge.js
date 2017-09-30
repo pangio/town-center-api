@@ -8,12 +8,12 @@ class StoreBadge extends React.Component {
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const styles = { padding: 7 }
 
-    let classNamesBadge = classNames({
-		'store-badge': true, 
-		'badge': true, 
+	let classNamesBadge = classNames({
+		'store-badge': true,
+		'badge': true,
 		'pull-left': this.props.alignLeft,
 		'pull-right': !this.props.alignLeft
-    });
+	})
 
     return (
 		<div className={classNamesBadge}>
@@ -31,7 +31,6 @@ class StoreBadge extends React.Component {
 		        <ImgCache src={assetsurl + 'ic_geo.png'} />
 		        <span className='lightgray bold roboto27'>{this.props.store.local}</span>
 	    	</div>
-
     	</div>
     )
   }

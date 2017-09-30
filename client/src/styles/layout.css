@@ -76,6 +76,10 @@ body {
   }
 }
 .resto-list-container {
-  max-width: 900px;
-  /*padding-top: 150px;*/
+  width: 1200px;
+}
+@media (max-width: 1200px) {
+  .resto-list-container {
+    width: 600px;
+  }
 }
