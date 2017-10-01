@@ -87,7 +87,7 @@ class RestoList extends React.Component {
                 let align = i % 2 === 0
                 return (
                   <NavLink to={`/restaurantes/${resto.local}`} key={i} >
-                      <RestoBadge resto={resto} key={i} alignLeft = {align} />
+                      <RestoBadge resto={resto} key={i} pullLeft = {align} />
                   </NavLink>
                 )
               })

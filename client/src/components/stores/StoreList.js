@@ -89,7 +89,7 @@ class StoreList extends React.Component {
                 let align = i % 2 === 0
                 return (
                   <NavLink to={`/tiendas/${store.local}`} key={i} >
-                      <StoreBadge store={store} key={i} alignLeft = {align} />
+                      <StoreBadge store={store} key={i} pullLeft = {align} />
                   </NavLink>
                 )
               })

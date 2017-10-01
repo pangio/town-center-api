@@ -11,8 +11,7 @@ class StoreBadge extends React.Component {
 	let classNamesBadge = classNames({
 		'store-badge': true,
 		'badge': true,
-		'pull-left': this.props.alignLeft,
-		'pull-right': !this.props.alignLeft
+		'card-pull-right': !this.props.pullLeft
 	})
 
     return (

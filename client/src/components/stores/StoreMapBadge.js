@@ -6,11 +6,11 @@ class StoreMapBadge extends React.Component {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const margin0 = { margin:0 }
-    const widthMap = { width:521 }
+    const widthMap = { width:530 }
     return (
 	<div className='row'>
 	<div className='col-xs-12'>
-		<div className='badge store-map-badge col-xs-6 float-none'>
+		<div className='badge store-map-badge-left col-xs-6 float-none'>
 			<div style={margin0}>
 				<ImgCache classNames={'img-responsive col-xs-6 padding margin-left-25-p'}
 					src='https://s3.amazonaws.com/towncenterweb/tiendas/ic_adidas.png' />
@@ -43,7 +43,7 @@ class StoreMapBadge extends React.Component {
 	    	</div>
     	</div>
 
-		<div className='badge col-xs-6 float-none' style={widthMap}>
+		<div className='badge store-map-badge-right col-xs-6 float-none' style={widthMap}>
 			<ImgCache
 				classNames={'img-responsive col-xs-12 store-map-img'}
 				src= { s3url + 'mapas/' + this.props.store.map_url } />

@@ -22,8 +22,8 @@
   text-align: left;
   background-color: white;
   border-radius: 0px;
-  margin: 5px;
-  margin-top: 60px;
+  /*margin: 5px;*/
+  /*margin-top: 60px;*/
   border-style: double;
   border-width: 1px;
   border-color: #BDBDBD;
@@ -90,6 +90,23 @@
 
 .store-badge-img { height: 145px; width: 145px;}
 .resto-badge-img { height: 145px; width: 145px;}
+
+.store-map-badge-right {  width: 495px; margin-top: 60px;}
+.store-map-badge-left {  width: 495px; margin-top: 60px;}
+@media (min-width: 1200px) {
+  .store-map-badge-left {
+    margin-right: 172px;
+  }
+}
+
+.resto-map-badge-right {  width: 495px; margin-top: 60px;}
+.resto-map-badge-left {  width: 495px; margin-top: 60px;}
+
+@media (min-width: 1200px) {
+  /*only desktop*/
+  .card-pull-right { margin-left: 96px;}
+  .resto-map-badge-left { margin-right: 172px;}
+}
 
 .roboto20 { font-size: 20pt; margin: 0;}
 .roboto22 { font-size: 22pt; margin: 0;}
