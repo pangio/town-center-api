@@ -5,23 +5,16 @@ class StoreMapBadge extends React.Component {
   render() {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
-    const padding1 = { padding: 1 }
-    const marginTop = { marginTop: '20%' }
+    const paddingTop = { paddingTop: 95 }
     const margin0 = { margin:0 }
     return (
 	<div className='row'>
 	<div className='col-xs-12'>
-		<div className='badge resto-map-badge col-xs-6 float-none'>
+		<div className='badge store-map-badge col-xs-6 float-none'>
 			<div style={margin0}>
 				<ImgCache classNames={'img-responsive col-xs-6 padding'}
 					src='https://s3.amazonaws.com/towncenterweb/tiendas/ic_adidas.png' />
 	    	</div>
-			<div>
-				<div className='col-xs-5' style={marginTop}>
-					<span className='card-name'><strong>{this.props.store.name}</strong></span>
-		    	</div>
-	    	</div>
-
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <ImgCache
@@ -50,10 +43,10 @@ class StoreMapBadge extends React.Component {
 	    	</div>
     	</div>
 
-		<div className='badge resto-badge col-xs-6 float-none'>
+		<div className='badge store-badge col-xs-6 float-none'>
 			<ImgCache
-				classNames={'img-responsive col-xs-12 resto-map-img'}
-				styles={padding1}
+				classNames={'img-responsive col-xs-12 store-map-img'}
+				styles={paddingTop}
 				src= { s3url + 'mapas/' + this.props.store.map_url } />
     	</div>
 	</div>

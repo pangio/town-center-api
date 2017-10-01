@@ -6,7 +6,7 @@ class RestoMapBadge extends React.Component {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const padding1 = { padding: 1 }
-    const marginTop = { marginTop: '20%' }
+    const paddingTop = { paddingTop: 95 }
     const margin0 = { margin:0 }
     return (
 	<div className='row'>
@@ -16,12 +16,6 @@ class RestoMapBadge extends React.Component {
 				<img className='img-responsive col-xs-6 padding' alt=''
 					src='https://s3.amazonaws.com/towncenterweb/restaurantes/ic_haagendazs.png' />
 	    	</div>
-			<div>
-				<div className='col-xs-5' style={marginTop}>
-					<span className='card-name'><strong>{this.props.resto.name}</strong></span>
-		    	</div>
-	    	</div>
-
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 					<ImgCache
@@ -53,7 +47,7 @@ class RestoMapBadge extends React.Component {
 		<div className='badge resto-badge col-xs-6 float-none'>
 			<ImgCache
 				classNames={'img-responsive col-xs-12 resto-map-img'}
-				styles={padding1}
+				styles={paddingTop}
 				src= { s3url +'mapas/' + this.props.resto.map_url }/>
     	</div>
 	</div>

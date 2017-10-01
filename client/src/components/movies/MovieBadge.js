@@ -7,8 +7,9 @@ class MovieBadge extends React.Component {
     const margin0 = { margin:0 }
     const verticalAlign = { verticalAlign:'middle' }
     const minHeight = { minHeight:40 }
+    const widthUnset = { width: 'unset' }
     return (
-		<div className='badge movie-badge'>
+		<div className='badge movie-badge' style={widthUnset}>
 			<div className='row' style={margin0}>
 				<img className='img-responsive col-xs-12 movie-badge-img' alt=''
 					style={padding1}
