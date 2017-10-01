@@ -18,10 +18,12 @@
   white-space: pre-wrap; overflow: hidden;
 }
 .badge {
+  vertical-align: top;
   text-align: left;
   background-color: white;
   border-radius: 0px;
   margin: 5px;
+  margin-top: 60px;
   border-style: double;
   border-width: 1px;
   border-color: #BDBDBD;
@@ -38,21 +40,22 @@
   overflow: hidden;
 }
 .badge-location-img {
-  padding: 0 10px;
-  height: 16px;
+  /*height: 16px;*/
+  padding-left: 50px;
+  padding-right: 30px;
 }
 /*badge icons*/
 .resto-list-container .resto-badge .badge-location img {
   width: 30px;
   margin-right: 30px;
   margin-left: 175px;
-  padding-bottom: 20px;
+  vertical-align: text-bottom;
 }
 .store-list-container .store-badge .badge-location img {
   width: 30px;
   margin-right: 30px;
   margin-left: 175px;
-  padding-bottom: 20px;
+  vertical-align: text-bottom;
 }
 /*end badge icons*/
 .hospital-section {
@@ -82,14 +85,14 @@
   border-color: #BDBDBD;
 }
 
-.resto-map-img { height: 530px; width: 530px;}
-.store-map-img { height: 530px; width: 530px;}
+.resto-map-img { padding: 0}
+.store-map-img { padding: 0}
 
 .store-badge-img { height: 145px; width: 145px;}
 .resto-badge-img { height: 145px; width: 145px;}
 
-.roboto20 { font-size: 20pt; padding: 0; margin: 0;}
-.roboto22 { font-size: 22pt; padding: 0; margin: 0;}
-.roboto27 { font-size: 27pt; padding: 0; margin: 0;}
+.roboto20 { font-size: 20pt; margin: 0;}
+.roboto22 { font-size: 22pt; margin: 0;}
+.roboto27 { font-size: 27pt; margin: 0;}
 
 .lightgray-store { color: #BDBDBD;}

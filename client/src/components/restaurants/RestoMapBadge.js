@@ -5,19 +5,18 @@ class RestoMapBadge extends React.Component {
   render() {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
-    const padding1 = { padding: 1 }
-    const paddingTop = { paddingTop: 95 }
     const margin0 = { margin:0 }
+    const widthMap = { width:521 }
     return (
 	<div className='row'>
 	<div className='col-xs-12'>
-		<div className='badge resto-map-badge col-xs-6 float-none'>
-			<div style={margin0}>
-				<img className='img-responsive col-xs-6 padding' alt=''
+		<div className='badge store-map-badge col-xs-6 float-none'>
+			<div className='row' style={margin0}>
+				<ImgCache classNames={'img-responsive col-xs-6 padding margin-left-25-p'}
 					src='https://s3.amazonaws.com/towncenterweb/restaurantes/ic_haagendazs.png' />
 	    	</div>
 			<div className='row' style={margin0}>
-				<div className='col-xs-12 padding-v badge-location'>
+				<div className='col-xs-12 padding-v-20 badge-location roboto20'>
 					<ImgCache
 						classNames={'badge-location-img'}
 						src={assetsurl + 'ic_time.png'} />
@@ -26,7 +25,7 @@ class RestoMapBadge extends React.Component {
 	    	</div>
 
 			<div className='row' style={margin0}>
-				<div className='col-xs-12 padding-v badge-location'>
+				<div className='col-xs-12 padding-v-20 badge-location roboto20'>
 					<ImgCache
 						classNames={'badge-location-img'}
 						src={assetsurl + 'ic_info.png'} />
@@ -35,7 +34,7 @@ class RestoMapBadge extends React.Component {
 	    	</div>
 
 			<div className='row' style={margin0}>
-				<div className='col-xs-12 padding-v badge-location'>
+				<div className='col-xs-12 padding-v-40 badge-location roboto20'>
 					<ImgCache
 						classNames={'badge-location-img'}
 						src={assetsurl + 'ic_geo.png'} />
@@ -44,11 +43,10 @@ class RestoMapBadge extends React.Component {
 	    	</div>
     	</div>
 
-		<div className='badge resto-badge col-xs-6 float-none'>
+		<div className='badge col-xs-6 float-none' style={widthMap}>
 			<ImgCache
 				classNames={'img-responsive col-xs-12 resto-map-img'}
-				styles={paddingTop}
-				src= { s3url +'mapas/' + this.props.resto.map_url }/>
+				src= { s3url + 'mapas/' + this.props.resto.map_url }/>
     	</div>
 	</div>
 	</div>
