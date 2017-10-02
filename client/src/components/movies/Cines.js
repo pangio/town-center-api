@@ -64,20 +64,22 @@ class Cines extends Component {
       <div className='center page-container cines'>
         <h2 className='background cines'><span>¿Vamos a cine?</span></h2>
 
-        <div className='row page-container header-container'>
-          <div className='col-md-6'>
-            <div className='row'>
-              <img className='img-responsive header-donde-img' alt=''
-                src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
+        <div className='green-line-wrapper'>
+          <div className='row header-container'>
+            <div className='col-md-6'>
+              <div className='row'>
+                <img className='img-responsive header-donde-img' alt=''
+                  src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
+              </div>
+              <div className='row'>
+                <h2 className='cines green-header'><span>¿Vamos a cine?</span></h2>
+              </div>
             </div>
-            <div className='row'>
-              <h2 className='cines green-header'><span>¿Vamos a cine?</span></h2>
-            </div>
-          </div>
 
-          <div className='col-md-6 header-main-img'>
-            <img className="img-responsive" alt=''
-                src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-cine.png' />
+            <div className='col-md-6 header-main-img'>
+              <img className="img-responsive" alt=''
+                  src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-cine.png' />
+            </div>
           </div>
         </div>
 

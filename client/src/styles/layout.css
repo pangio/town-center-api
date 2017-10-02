@@ -67,19 +67,10 @@ body {
   height: 200px;
 }
 
-.store-list-container {
-  width: 1200px;
-}
+.store-list-container { width: 1200px;}
+.resto-list-container { width: 1200px;}
+
 @media (max-width: 1200px) {
-  .store-list-container {
-    width: 600px;
-  }
-}
-.resto-list-container {
-  width: 1200px;
-}
-@media (max-width: 1200px) {
-  .resto-list-container {
-    width: 600px;
-  }
+  .store-list-container { width: 600px;}
+  .resto-list-container { width: 600px;}
 }

@@ -3,22 +3,24 @@ import React, { Component } from 'react'
 class Hospital extends Component {
   render() {
     return (
-			<div className='page-container'>
+			<div className='center page-container'>
 				<h2 className='background hospital'><span>Hospital & Consultorios en Costa del Este</span></h2>
 
-				<div className='row page-container header-container'>
-					<div className='col-md-6'>
-						<div className='row'>
-							<img className='img-responsive header-donde-img' alt=''
-								src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
+				<div className='green-line-wrapper'>
+					<div className='row header-container'>
+						<div className='col-md-6'>
+							<div className='row'>
+								<img className='img-responsive header-donde-img' alt=''
+									src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
+							</div>
+							<div className='row'>
+								<h2 className='hospital green-header'><span>Hospital y Consultorios</span></h2>
+							</div>
 						</div>
-						<div className='row'>
-							<h2 className='hospital green-header'><span>Hospital y Consultorios</span></h2>
-						</div>
+						<div className='col-md-6 header-main-img'>
+							<img className='img-responsive' alt=''
+								src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-hospital.png' />
 					</div>
-					<div className='col-md-6 header-main-img'>
-						<img className='img-responsive' alt=''
-							src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-hospital.png' />
 				</div>
 			</div>
 
