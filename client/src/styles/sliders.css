@@ -108,7 +108,7 @@
   opacity: 1;
 }
 /*slider offers*/
-.ofertas .slick-slide.slick-active.slick-center {
+.ofertas .slick-slide.slick-active.slick-center img {
   border-color: #718f40;
   border-style: solid;
   border-width: 2px;
