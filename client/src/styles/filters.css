@@ -32,33 +32,49 @@ input.search {
 }
 /*sales offers*/
 .sales-controls {
+    text-align: left;
+    padding-left: 20px;
     margin-top: 50px;
     color: gray;
-    margin: 55px 0px 0px 0px;
-    padding: 50px;
-    width: 288px;
-    height: 288px;
-    border-color: #BDBDBD;
-    border-radius: 5px;
-    border-style: double;
-} 
-/*desktop*/
-@media (min-width: 1024px) {
-    .sales-controls {
-        float: left;
-        width: 300px;
-        height: 292px;
-    }
+    width: 215px;
+    height: 260px;
+    box-shadow: inset 0 0 0 1px #BDBDBD;
+}
+.controls-por-fecha {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.controls-fecha {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 28px;
 }
 /*mobile*/
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .sales-controls {
         border-style: none;
         width: unset;
         height: unset;
         padding: unset;
+        box-shadow: unset;
+        float: none !important;
+        display: inline-flex;
+        margin: 0;
     }
-    .ofertas-container {
-        text-align: center;
+    .sales-controls a {
+        padding: 20px;
+    }
+    .controls-fecha {
+        padding-bottom: 0;
+    }
+    .controls-por-fecha.desktop {
+        display: none;
+    }
+    .controls-por-fecha.mobile {
+        display: block;
+        padding: 0;
+        margin: 40px;
+        color: #BDBDBD;
     }
 }

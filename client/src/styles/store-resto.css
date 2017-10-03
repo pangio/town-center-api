@@ -84,6 +84,19 @@
   border-width: 1px;
   border-color: #BDBDBD;
 }
+.oferta-badge {
+  text-align: left;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 0px;
+  margin-bottom: 53px;
+  border-style: double;
+  border-width: 1px;
+  border-color: #BDBDBD;
+  margin-left: 20px;
+  display: inline-block;
+}
 
 .resto-map-img { padding: 0}
 .store-map-img { padding: 0}

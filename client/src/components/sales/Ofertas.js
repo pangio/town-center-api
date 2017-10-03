@@ -116,31 +116,32 @@ class Ofertas extends Component {
         </div>
 
         { this.props.children }
-        <div className='ofertas-container'>
-        <div className='sales-controls'>
-          <h5>POR FECHA</h5>
-          <p><a href='#' onClick={ () => this.setData(this.state.salesToday)}>HOY</a></p>
-          <p><a href='#' onClick={ () => this.setData(this.state.salesTomorrow)}>Mañana</a></p>
-          <p><a href='#' onClick={ () => this.setData(this.state.salesWeek)}>Esta Semana</a></p>
-          <p><a href='#' onClick={ () => this.setData(this.state.salesMonth)}>Del Mes</a></p>
-        </div>
-        {
-          this.state.isLoading &&
-          <Modal.Dialog className='center'>
-            <Modal.Body>
-              <i className='fa fa-refresh fa-spin'></i>
-            </Modal.Body>
-          </Modal.Dialog>
-        }
-        {
-          this.isLoaded() &&
-          <div style={{paddingTop: 50}}>
-            <SalesList salesList={_.filter(this.state.sales, function(s) {
-              return s.image_url !== undefined
-            })} />
+        <div className='ofertas-list-container row center'>
+          <p className='controls-por-fecha mobile'>POR FECHA</p>
+          <div className='sales-controls pull-left'>
+            <p className='controls-por-fecha desktop'>POR FECHA</p>
+            <p className='controls-fecha'><a href='#' onClick={ () => this.setData(this.state.salesToday)}>HOY</a></p>
+            <p className='controls-fecha'><a href='#' onClick={ () => this.setData(this.state.salesTomorrow)}>Mañana</a></p>
+            <p className='controls-fecha'><a href='#' onClick={ () => this.setData(this.state.salesWeek)}>Esta Semana</a></p>
+            <p className='controls-fecha'><a href='#' onClick={ () => this.setData(this.state.salesMonth)}>Del Mes</a></p>
           </div>
-        }
-      </div>
+          {
+            this.state.isLoading &&
+            <Modal.Dialog className='center'>
+              <Modal.Body>
+                <i className='fa fa-refresh fa-spin'></i>
+              </Modal.Body>
+            </Modal.Dialog>
+          }
+          {
+            this.isLoaded() &&
+            <div className='sales-list pull-right'>
+              <SalesList salesList={_.filter(this.state.sales, function(s) {
+                return s.image_url !== undefined
+              })} />
+            </div>
+          }
+        </div>
       </div>
     )
   }

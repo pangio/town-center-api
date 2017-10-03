@@ -39,11 +39,6 @@ body {
 .sections-img:hover {
     box-shadow: inset 0 0 0 1px #718f40;
 }
-
-.ofertas-container {
-    padding: 0 40px;
-}
-
 .footer-container {
   padding-top: 150px;
 }
@@ -69,8 +64,27 @@ body {
 
 .store-list-container { width: 1200px;}
 .resto-list-container { width: 1200px;}
+.ofertas-list-container { width: 1200px;}
+.sales-list { 
+  padding-top: 50px;
+  width: 960px;
+}
 
 @media (max-width: 1200px) {
   .store-list-container { width: 600px;}
   .resto-list-container { width: 600px;}
+  .ofertas-list-container { width: 600px; text-align: center;}
+  .sales-list { width: 960px;}
+}
+
+@media (max-width: 900px) {
+  .sales-list {
+    width: 660px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .sales-list {
+    /*width: 360px;*/
+  }
 }
