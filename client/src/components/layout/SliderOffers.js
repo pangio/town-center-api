@@ -85,39 +85,21 @@ class SliderOffers extends React.Component {
             </Modal.Body>
           </Modal.Dialog>
         }
-
-        <Slider {...this.state.settings}>
-          <div className="center">
-            <NavLink to="/ofertas" >
-              <ImgCache classNames={'img-responsive slider-offer-img'}
-                        src={s3url + 'of1.png'} />
-            </NavLink>
-          </div>
-          <div className="center">
-            <NavLink to="/ofertas" >
-              <ImgCache classNames={'img-responsive slider-offer-img'}
-                        src={s3url + 'of2.png'} />
-            </NavLink>
-          </div>
-          <div className="center">
-            <NavLink to="/ofertas" >
-              <ImgCache classNames={'img-responsive slider-offer-img'}
-                        src={s3url + 'of3.png'} />
-            </NavLink>
-          </div>
-          <div className="center">
-            <NavLink to="/ofertas" >
-              <ImgCache classNames={'img-responsive slider-offer-img'}
-                        src={s3url + 'of4.png'} />
-            </NavLink>
-          </div>
-          <div className="center">
-            <NavLink to="/ofertas" >
-              <ImgCache classNames={'img-responsive slider-offer-img'}
-                        src={s3url + 'of5.png'} />
-            </NavLink>
-          </div>
-        </Slider>
+        {
+          !this.state.isLoading &&
+          <Slider {...this.state.settings}>
+              {
+                this.state.sales.map((sale, i) => {
+                  return (
+                  <NavLink to="/ofertas" key={i}>
+                    <ImgCache classNames={'img-responsive slider-offer-img'}
+                              src={s3url + sale.image_url} />
+                  </NavLink>
+                  )
+                })
+              }
+          </Slider>
+        }
       </div>
     )
   }
