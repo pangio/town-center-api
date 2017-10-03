@@ -78,18 +78,22 @@ h2.background span {
   float: right;
   padding: 0;
 }
-/*.header-main-img img {  width: 600px;}*/
 .header-donde-img {
-  /*height: 200px;*/
-  /*margin: 30px 0;*/
-  padding: 46px 46px 46px;
+  padding: 55px 46px 46px;
 }
 .green-header span {
   font-size: 25pt;
+  display: inline-block;
 }
 .green-header {
-  padding-top: 35px;
+  padding-right: 140px;
 }
+.header-container-l .header-donde-img {
+  float: left !important;
+}
+.header-container-l { width: 715px;}
+.header-container-r { width: 485px;}
+
 @media (max-width: 1000px) {
     .header-donde-img {
       display: none !important;
@@ -103,5 +107,13 @@ h2.background span {
     .header-main-img {
       text-align: center;
       float: unset;
+    }
+}
+@media (max-width: 1200px) {
+    .header-container-l { display: none;}
+    .header-container-r { 
+      width: 100%;
+      float: none;
+      text-align: center;
     }
 }

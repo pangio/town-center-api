@@ -66,18 +66,17 @@ class Cines extends Component {
 
         <div className='green-line-wrapper'>
           <div className='row header-container'>
-            <div className='col-md-6'>
-              <div className='row'>
+            <div className='col-md-6 header-container-l pull-left'>
+              <div className='row' style={{padding:0}}>
                 <img className='img-responsive header-donde-img' alt=''
                   src='https://s3.amazonaws.com/towncenterweb/assets/img_donde.png' />
               </div>
-              <div className='row'>
+              <div className='row' style={{padding:0}}>
                 <h2 className='cines green-header'><span>¿Vamos a cine?</span></h2>
               </div>
             </div>
-
-            <div className='col-md-6 header-main-img'>
-              <img className="img-responsive" alt=''
+            <div className='col-md-6 header-container-r header-main-img'>
+              <img className='img-responsive' alt=''
                   src='https://s3.amazonaws.com/towncenterweb/assets/headerphone-cine.png' />
             </div>
           </div>
