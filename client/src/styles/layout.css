@@ -74,17 +74,5 @@ body {
   .store-list-container { width: 600px;}
   .resto-list-container { width: 600px;}
   .ofertas-list-container { width: 600px; text-align: center;}
-  .sales-list { width: 960px;}
-}
-
-@media (max-width: 900px) {
-  .sales-list {
-    width: 660px;
-    text-align: center;
-  }
-}
-@media (max-width: 600px) {
-  .sales-list {
-    /*width: 360px;*/
-  }
+  .sales-list { width: 100%;}
 }
