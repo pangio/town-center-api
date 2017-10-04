@@ -7,6 +7,7 @@ class MovieBadge extends React.Component {
     const margin0 = { margin:0 }
     const verticalAlign = { verticalAlign:'middle' }
     const minHeight = { minHeight:40 }
+    const movieStyle = {verticalAlign, minHeight}
     const widthUnset = { width: 'unset' }
     return (
 		<div className='badge movie-badge' style={widthUnset}>
@@ -17,8 +18,8 @@ class MovieBadge extends React.Component {
 	    	</div>
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 movie-sm-txt'>
-					<p className='center padding-v' style={minHeight, verticalAlign}><strong>{this.props.movie.movie}</strong></p>
-					<p className='center' style={minHeight, verticalAlign}>{this.props.movie.hours}</p>
+					<p className='center padding-v' style={movieStyle}><strong>{this.props.movie.movie}</strong></p>
+					<p className='center' style={movieStyle}>{this.props.movie.hours}</p>
 					<br />
 		    	</div>
 	    	</div>

@@ -8,7 +8,7 @@ import _ from 'underscore'
 import ImgCache from './ImgCache'
 import SliderArrowPrev from './SliderArrowPrev'
 import SliderArrowNext from './SliderArrowNext'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class SliderOffers extends React.Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class SliderOffers extends React.Component {
   }
 
   componentWillMount() {
-    console.log('fetching all Sales For Home Slider...')
+    // console.log('fetching all Sales For Home Slider...')
     this.fetchAllSalesForHomeSlider()
   }
 

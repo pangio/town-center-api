@@ -5,7 +5,6 @@ class SaleBadge extends React.Component {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/ofertas/'
     const padding1 = { padding: 1 }
     const padding5 = { padding: 5 }
-    const margin0 = { margin:0 }
     return (
 		<div className='oferta-badge'>
 			<img className='img-responsive' alt=''

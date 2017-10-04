@@ -15,7 +15,7 @@ class SalesList extends React.Component {
     return (
       <div>
         {
-          this.props.salesList.length == 0 &&
+          this.props.salesList.length === 0 &&
           <SalesListEmpty/>
         }
         {

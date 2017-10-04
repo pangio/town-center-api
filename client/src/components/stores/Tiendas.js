@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import StoreList from './StoreList'
 import _ from 'underscore'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class Tiendas extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Tiendas extends Component {
   }
 
   componentWillMount() {
-    console.log('fetching all Stores...')
+    // console.log('fetching all Stores...')
     this.fetchAllStores()
   }
 

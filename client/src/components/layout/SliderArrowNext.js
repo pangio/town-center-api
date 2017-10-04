@@ -5,7 +5,7 @@ class SliderNextArrow extends React.Component {
 	  const {className, style, onClick} = this.props
 	  return (
 	    <div className={className} style={{...style, display: 'block'}} onClick={onClick} >
-	      <img src='https://s3.amazonaws.com/towncenterweb/assets/ic_next.png' />
+	      <img src='https://s3.amazonaws.com/towncenterweb/assets/ic_next.png' alt='' />
 	    </div>
 	  )
   }

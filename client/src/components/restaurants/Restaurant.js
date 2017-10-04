@@ -1,6 +1,6 @@
 import React from 'react'
 import RestoMapBadge from './RestoMapBadge'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Restaurant extends React.Component {
   }
 
   fetchRestaurant = (id = this.props.params.id) => {
-    console.log('fetching Restaurant...')
+    // console.log('fetching Restaurant...')
     this.setState({isLoading: true})
     fetch('/api/restaurantes/'+ id)
       .then(response => response.json())

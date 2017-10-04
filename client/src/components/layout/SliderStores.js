@@ -1,8 +1,6 @@
 import React from 'react'
 import '../../main.css'
-// import NavLink from '../NavLink'
-// import ImgCache from './ImgCache'
-import { Carousel, Item, Button, Modal } from 'react-bootstrap'
+import { Carousel, Modal } from 'react-bootstrap'
 import _ from 'underscore'
 
 class SliderStores extends React.Component {
@@ -15,7 +13,7 @@ class SliderStores extends React.Component {
   }
 
   componentWillMount() {
-    console.log('fetching all Stores For Home Slider...')
+    // console.log('fetching all Stores For Home Slider...')
     this.fetchAllStoresForHomeSlider()
   }
 
@@ -57,7 +55,7 @@ class SliderStores extends React.Component {
               this.state.stores.map((store, i) => {
                 return (
                   <Carousel.Item key={i}>
-                    <a href='/tiendas'><img src={s3url + store.home_image_url} /></a>
+                    <a href='/tiendas'><img src={s3url + store.home_image_url} alt=''/></a>
                   </Carousel.Item>
                 )
               })

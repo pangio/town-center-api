@@ -1,6 +1,6 @@
 import React from 'react'
 import StoreMapBadge from './StoreMapBadge'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class Tienda extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Tienda extends React.Component {
   }
 
   fetchStore = (id = this.props.params.id) => {
-    console.log('fetching Store...')
+    // console.log('fetching Store...')
     this.setState({isLoading: true})
     fetch('/api/tiendas/'+ id)
       .then(response => response.json())

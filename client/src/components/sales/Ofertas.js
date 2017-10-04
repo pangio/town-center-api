@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SalesList from './SalesList'
 import _ from 'underscore'
 import moment from 'moment'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class Ofertas extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Ofertas extends Component {
   }
 
   componentWillMount() {
-    console.log('fetching all Sales...')
+    // console.log('fetching all Sales...')
     this.fetchAllSales()
   }
 

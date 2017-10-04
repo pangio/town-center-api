@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import SliderArrowPrev from '../layout/SliderArrowPrev'
 import SliderArrowNext from '../layout/SliderArrowNext'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 class Cines extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class Cines extends Component {
   }
 
   componentWillMount() {
-    console.log('fetching all Movies...')
+    // console.log('fetching all Movies...')
     this.fetchAllMovies()
   }
 
