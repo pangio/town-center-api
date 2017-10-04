@@ -56,7 +56,7 @@ class SliderOffers extends React.Component {
       .then(response => {
         let responseJson = JSON.parse(response.data)
         responseJson = _.filter(responseJson, function(s) {
-            return s.image_url !== undefined
+            return s.show_home === 'true' && s.image_url !== undefined
           })
         this.setState({ sales: responseJson })
       })
