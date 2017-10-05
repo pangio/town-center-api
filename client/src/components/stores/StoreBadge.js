@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 class StoreBadge extends React.Component {
   render() {
-	const s3url = 'https://s3.amazonaws.com/towncenterweb/tiendas/'
+	const s3url = 'https://s3.amazonaws.com/towncenterweb/locations/stores/image/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const styles = { padding: 7 }
 
@@ -19,7 +19,7 @@ class StoreBadge extends React.Component {
 			<ImgCache
 				classNames={'img-responsive col-xs-4 store-badge-img'}
 				styles={styles}
-				src='https://s3.amazonaws.com/towncenterweb/tiendas/ic_adidas.png' />
+				src= { s3url + this.props.store.image_url} />
 			<div className='col-xs-7 store-sm-txt'>
 				<p className='roboto22'><strong>{this.props.store.name}</strong></p>
 				<p className='roboto22'>{this.props.store.status} {this.props.store.hours}</p>

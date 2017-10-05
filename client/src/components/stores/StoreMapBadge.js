@@ -3,7 +3,8 @@ import ImgCache from '../layout/ImgCache'
 
 class StoreMapBadge extends React.Component {
   render() {
-	const s3url = 'https://s3.amazonaws.com/towncenterweb/'
+	const s3url = 'https://s3.amazonaws.com/towncenterweb/locations/stores/image/'
+	const mapsUrl = 'https://s3.amazonaws.com/towncenterweb/mapas/'
 	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const margin0 = { margin:0 }
     const widthMap = { width:530 }
@@ -13,7 +14,7 @@ class StoreMapBadge extends React.Component {
 		<div className='badge store-map-badge-left col-xs-6 float-none'>
 			<div style={margin0}>
 				<ImgCache classNames={'img-responsive col-xs-6 padding margin-left-25-p'}
-					src='https://s3.amazonaws.com/towncenterweb/tiendas/ic_adidas.png' />
+					src= { s3url + this.props.store.image_url} />
 	    	</div>
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v-20 badge-location roboto20'>
@@ -46,7 +47,7 @@ class StoreMapBadge extends React.Component {
 		<div className='badge store-map-badge-right col-xs-6 float-none' style={widthMap}>
 			<ImgCache
 				classNames={'img-responsive col-xs-12 store-map-img'}
-				src= { s3url + 'mapas/' + this.props.store.map_url } />
+				src= { mapsUrl + this.props.store.map_url } />
     	</div>
 	</div>
 	</div>

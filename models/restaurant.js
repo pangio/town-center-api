@@ -13,13 +13,14 @@ exports.list = function(callback) {
       'category',
       'description',
       'hours',
+      'image_url',
       'local',
       'map_url',
       'name',
       'status',
       'type',
       'url',
-      // 'web_sm_image_url',
+      'web_image_url',
   	],
   	callback);
 };

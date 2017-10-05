@@ -13,6 +13,7 @@ exports.list = function(callback) {
       'category',
       'description',
       'home_image_url',
+      'image_url',
       'hours',
       'local',
       'name',
@@ -21,7 +22,7 @@ exports.list = function(callback) {
       'status',
       'type',
       'url',
-      // 'web_sm_image_url',
+      'web_image_url',
   	],
   	callback);
 };
